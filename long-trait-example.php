@@ -117,7 +117,26 @@ class Sentinelss {
 }
 
 
+//Map Selection
+$maps = array(
+    'PEARL',
+    'FRACTURE',
+    'BREEZE',
+    'ICEBOX',
+    'BIND',
+    'HAVEN',
+    'SPLIT',
+    'ASCENT',
+);
+
+
 //Execute
+
+//Map selection
+echo "Map: ";
+$pick = array_rand($maps);
+echo $maps[$pick];
+echo "\n\n";
 
 //Team 1 agents selections !!!
 echo "Team 1 Agents selection\n";
