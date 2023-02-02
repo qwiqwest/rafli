@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Landing Page using HTML, CSS & Javascript</title>
+    <title>CashFlow | Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/image/flow.png') }}"/>
 
     <!-- ==== STYLE.CSS ==== -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
@@ -24,7 +25,7 @@
       <!-- ==== NAVBAR ==== -->
       <nav class="nav">
         <div class="logo">
-          <h2>Rafli.</h2>
+          <h2>CashFlow_</h2>
         </div>
 
         <div class="nav_menu" id="nav_menu">
@@ -34,16 +35,16 @@
 
           <ul class="nav_menu_list">
             <li class="nav_menu_item">
-              <a href="#" class="nav_menu_link">account</a>
+              <a href="#" class="nav_menu_link">Cashier</a>
             </li>
             <li class="nav_menu_item">
-              <a href="#" class="nav_menu_link">about</a>
+              <a href="#" class="nav_menu_link">Menu</a>
             </li>
             <li class="nav_menu_item">
-              <a href="#" class="nav_menu_link">service</a>
+              <a href="#" class="nav_menu_link">Category</a>
             </li>
             <li class="nav_menu_item">
-              <a href="#" class="nav_menu_link">contact</a>
+              <a href="#" class="nav_menu_link">Transaction</a>
             </li>
           </ul>
         </div>
@@ -59,13 +60,13 @@
         <div class="grid-cols-2">
           <div class="grid-item-1">
             <h1 class="main-heading">
-              Welcome to <span>Devkit.</span>
+              Welcome to <span>CashFlow_</span>
               <br />
-              Develop anything.
+              Smooth like a flow.
             </h1>
             <p class="info-text">
-              Build a beautiful, modern website with flexible components built
-              from scratch.
+              Expedite and simplify transactions in |CashFlow|
+              Point Of Sales (POS)
             </p>
 
             <div class="btn_wrapper">
@@ -82,7 +83,7 @@
           </div>
           <div class="grid-item-2">
             <div class="team_img_wrapper">
-              <img src="{{ asset('assets/image/team.svg') }}" alt="team-img" />
+              <img src="{{ asset('assets/image/logo.svg') }}" alt="team-img" />
             </div>
           </div>
         </div>
