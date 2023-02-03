@@ -35,16 +35,16 @@
 
           <ul class="nav_menu_list">
             <li class="nav_menu_item">
-              <a href="#" class="nav_menu_link">Cashier</a>
+              <a href="/cashier" class="nav_menu_link">Cashier</a>
             </li>
             <li class="nav_menu_item">
-              <a href="#" class="nav_menu_link">Menu</a>
+              <a href="/menu" class="nav_menu_link">Menu</a>
             </li>
             <li class="nav_menu_item">
-              <a href="#" class="nav_menu_link">Category</a>
+              <a href="/categories" class="nav_menu_link">Category</a>
             </li>
             <li class="nav_menu_item">
-              <a href="#" class="nav_menu_link">Transaction</a>
+              <a href="/transaction" class="nav_menu_link">Transaction</a>
             </li>
           </ul>
         </div>

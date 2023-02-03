@@ -22,3 +22,15 @@ Route::get('/pre-order', function () {
 Route::get('/pre-ss', function () {
     return view('ss');
 });
+Route::get('/menu', function () {
+    return view('menu');
+});
+Route::get('/cashier', function () {
+    return view('cashier');
+});
+Route::get('/categories', function () {
+    return view('categories');
+});
+Route::get('/transaction', function () {
+    return view('transaction');
+});
