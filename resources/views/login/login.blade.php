@@ -10,16 +10,19 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/image/flow.png') }}"/>
 </head>
 <body>
-    <div class="login">
-        <div class="login-triangle"></div>
-        
-        <h2 class="login-header">Log in</h2>
-      
-        <form class="login-container">
-          <p><input type="email" placeholder="Email"></p>
-          <p><input type="password" placeholder="Password"></p>
-          <p><input type="submit" value="Log in"></p>
-        </form>
-      </div>
+    <form class="text-left" method="GET" action="/dashboard">
+        @csrf
+
+            <div class="login">
+                <div class="login-triangle"></div>
+                
+                <h2 class="login-header">Log in</h2>
+            
+                <form class="login-container">
+                <p><input type="email" placeholder="Email"></p>
+                <p><input type="password" placeholder="Password"></p>
+                <p><input type="submit" value="Login"></p>
+                </form>
+            </div>
 </body>
 </html>
