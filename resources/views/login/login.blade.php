@@ -12,7 +12,7 @@
         <h1>CashFlow_ Login</h1>
     </header>
     <main>
-        <form id="login_form" class="form_class" action="/dashboard" method="post">
+        <form id="login_form" class="form_class" action="{{url('dashboard')}}" method="post">
             @csrf
             <div class="form_div">
                 <label>Login:</label>
