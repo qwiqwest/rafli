@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', function () {
-    return view('login.login');
+// Route::get('/login', [LoginController::class, 'login'])->name('login');
+
+Route::controller(LoginController::class)->group(function(){
+    Route::get('login','index')->name('login');
+    Route::post('login/proses', 'proses');
 });
+
+Route::group(['middleware' => ['Auth']],function(){
+    Route::group(['middleware' => ['CekUser:admin']],function(){
+        Route::resource('welcome', MainController::class);
+    });
+
+    Route::group(['middleware' => ['CekUser:kasir']],function(){
+        Route::resource('cashier', KasirController::class);
+    });
+});
+
 Route::get('/dashboard', function () {
     return view('welcome');
 });
