@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Beranda;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use PhpParser\Node\Expr\FuncCall;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,24 @@ use App\Http\Controllers\LoginController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('login.login');
+// Route::get('login', [LoginController::class, 'index'])->name('login');
+
+Route::controller(LoginController::class)->group(function(){
+    Route::get('login', 'index')->name('login');
+    Route::post('login/proses', 'proses');
+    Route::get('logout','logout');
 });
+
+Route::group(['middleware' => ['auth']],function(){
+    Route::group(['middleware'=>['cekUserLogin:admin']],function(){
+        Route::resource('beranda',Beranda::class);
+    });
+
+    Route::group(['middleware'=>['cekUserLogin:kasir']],function(){
+        Route::resource('kasir',Kasir::class);
+    });
+});
+
 Route::get('/dashboard', function () {
     return view('welcome');
 });
