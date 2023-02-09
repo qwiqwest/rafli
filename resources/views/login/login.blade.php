@@ -12,29 +12,13 @@
         <h1>CashFlow_ Login</h1>
     </header>
     <main>
-        <form id="login_form" class="form_class" action="{{url('login/proses')}}" method="post">
+        <form id="login_form" class="form_class" action="/dashboard" method="post">
             @csrf
             <div class="form_div">
                 <label>Login:</label>
                 <input class="field_class" name="login_txt" type="text" placeholder="Masukkan email" autofocus required>
-                @error('email')
-                    is-invalid
-                @enderror
-                @error('email')
-                    <div class="invalid-feedback">
-                        {{ $massage }}
-                    </div>
-                @enderror
                 <label>Password:</label>
                 <input id="pass" class="field_class" name="password_txt" type="password" placeholder="Masukkan Password" required>
-                @error('password')
-                    is-invalid
-                @enderror
-                @error('password')
-                    <div class="invalid-feedback">
-                        {{ $massage }}
-                    </div>
-                @enderror
                 <button class="submit_class" type="submit" form="login_form" onclick="return validarLogin()">Masuk</button>
             </div>
         </form>

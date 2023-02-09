@@ -13,25 +13,13 @@ use App\Http\Controllers\LoginController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/login', [LoginController::class, 'login'])->name('login');
-
-Route::controller(LoginController::class)->group(function(){
-    Route::get('login','index')->name('login');
-    Route::post('login/proses', 'proses');
+Route::get('/', function () {
+    return view('login.login');
 });
-
-Route::group(['middleware' => ['Auth']],function(){
-    Route::group(['middleware' => ['CekUser:admin']],function(){
-        Route::resource('welcome', MainController::class);
-    });
-
-    Route::group(['middleware' => ['CekUser:kasir']],function(){
-        Route::resource('cashier', KasirController::class);
-    });
-});
-
 Route::get('/dashboard', function () {
+    return view('welcome');
+});
+Route::post('/dashboard', function () {
     return view('welcome');
 });
 Route::get('/pre-order', function () {
