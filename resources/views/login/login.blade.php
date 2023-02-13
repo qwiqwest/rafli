@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/image/flow.png') }}"/>
 </head>
 <body>
-<form id="login_form" class="form_class" action="{{url('/login/proses')}}" method="post">
+<form id="login_form" class="form_class" action="{{route('dasboard')}}" method="post">
             @csrf
 <div class="login-wrap">
 	<div class="login-html">
@@ -18,19 +18,22 @@
 		<div class="login-form">
 			<div class="sign-in-htm">
 				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input">
+					<label for="user" class="label">Email</label>
+					<input id="user" type="email" class="input" name="email" value="{{old('email')}}">
+					<span class="text-danger">@error('email') {{$message}} @enderror</span>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="pass" type="password" class="input" data-type="password" name="password" value="{{old('password')}}">
+					<span class="text-danger">@error('password') {{$message}} @enderror</span>
 				</div>
 				<div class="group">
 					<input id="check" type="checkbox" class="check" checked>
 					<label for="check"><span class="icon"></span> Keep me Signed in</label>
 				</div>
 				<div class="group">
-					<input type="submit" class="button" value="Sign In">
+					<button id="singin" class="button" name="submit">Sign In</button>
+					{{-- <input type="submit" class="button" value="Sign In"> --}}
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk">
@@ -39,6 +42,18 @@
 			</div>
 		</div>
 	</div>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	@if(Session::has("error"))
+	<script>
+		Swal.fire({
+			  position: 'top-center',
+			  icon: 'error',
+			  title: '{{Session::get('error')}}',
+			  showConfirmButton: false,
+			  timer: 1500 
+		})
+	 </script>
+	@endif
 </div>
 </body>
 </html>

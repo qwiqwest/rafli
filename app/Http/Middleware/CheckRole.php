@@ -5,8 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
-class CekUserLogin
+class CheckRole
 {
     /**
      * Handle an incoming request.
@@ -15,16 +14,11 @@ class CekUserLogin
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next, $rules)
+    public function handle(Request $request, Closure $next)
     {
-        if(!Auth::check()){
-            return redirect('login');
-        }
-
-        $user = Auth::user();
-        if($user->role == $rules){
+        if (Auth()->user()->role == 'admin') {
             return $next($request);
-        } 
-            return redirect('login')->with('error', "Kamu tidak ada akses");
+        }
+        return redirect('/')->with('fail','You have no admin access');
     }
 }

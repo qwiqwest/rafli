@@ -46,6 +46,9 @@
             <li class="nav_menu_item">
               <a href="/transaction" class="nav_menu_link">Transaction</a>
             </li>
+            <li class="nav_menu_item">
+              <a href="/logout" class="nav_menu_link">Logout</a>
+            </li>
           </ul>
         </div>
 

@@ -15,30 +15,14 @@ use PhpParser\Node\Expr\FuncCall;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('login', [LoginController::class, 'index'])->name('login');
-
-Route::controller(LoginController::class)->group(function(){
-    Route::get('login', 'index')->name('login');
-    Route::post('login/proses', 'proses');
-    Route::get('logout','logout');
+Route::get('/', function(){
+    return view('login.login');
 });
-
-Route::group(['middleware' => ['auth']],function(){
-    Route::group(['middleware'=>['cekUserLogin:admin']],function(){
-        Route::resource('beranda',Beranda::class);
-    });
-
-    Route::group(['middleware'=>['cekUserLogin:kasir']],function(){
-        Route::resource('kasir',Kasir::class);
-    });
-});
-
-Route::get('/dashboard', function () {
-    return view('welcome');
-});
-Route::post('/dashboard', function () {
-    return view('welcome');
-});
+Route::post('/dasboard', [LoginController::class,'login'])->name('dasboard');
+Route::get('/admin', [LoginController::class,'adminn'])->name('admin')->middleware('checkrole');
+// Route::post('/dashboard', function () {
+//     return view('welcome');
+// });
 Route::get('/pre-order', function () {
     return view('pre');
 });
@@ -57,3 +41,4 @@ Route::get('/categories', function () {
 Route::get('/transaction', function () {
     return view('transaction');
 });
+Route::get('/logout', [LoginController::class,'logout'])->name('logout');
