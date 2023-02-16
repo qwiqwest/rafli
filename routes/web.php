@@ -18,6 +18,7 @@ use PhpParser\Node\Expr\FuncCall;
 Route::get('/', function(){
     return view('login.login');
 });
+Route::get('/dasboard', [LoginController::class,'login'])->name('dasboard');
 Route::post('/dasboard', [LoginController::class,'login'])->name('dasboard');
 Route::get('/admin', [LoginController::class,'adminn'])->name('admin')->middleware('checkrole');
 // Route::post('/dashboard', function () {
