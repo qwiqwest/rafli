@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
         
         ],
         [
-            'username' => 'Kasie',
+            'username' => 'Kasir',
             'name_lengkap' => 'KasirAdaAja',
             'jk' => 'L',
             'alamat' => 'simlim no 1',
