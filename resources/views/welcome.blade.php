@@ -72,8 +72,8 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="/dasboard"><img class="main-logo" src="assets/image/logo.svg" width="200" height="60" alt="" /></a>
-                <strong><a href="/dasboard"><img src="assets/image/flow.png" width="200" height="60" alt="" /></a></strong>
+                <a href="/dasboard"><img class="main-logo" src="assets/image/logo.svg" width="200px" height="60px" alt="" /></a>
+                <strong><a href="/dasboard"><img src="assets/image/flow.png" width="200px" height="60px" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
@@ -216,7 +216,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro">
-                        <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
+                        <a href="index.html"><img class="main-logo" src="" alt="" /></a>
                     </div>
                 </div>
             </div>
