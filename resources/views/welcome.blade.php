@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dashboard V.3 | Kiaalap - Kiaalap Admin Template</title>
+    <title>CashFlow | Dashboard</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -80,7 +80,6 @@
                     <ul class="metismenu" id="menu1">
                         <li class="active">
                             <a class="has-arrow" href="/dasboard">
-								   <span class="educate-icon educate-home icon-wrap"></span>
 								   <span class="mini-click-non">Education</span>
 								</a>
                         </li>
@@ -216,7 +215,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro">
-                        <a href="index.html"><img class="main-logo" src="" alt="" /></a>
+                        <a href="index.html"><img class="main-logo" src="" height="60px" width="200px" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -254,6 +253,9 @@
                                                     </div>
                                                 </li>
                                                 <li class="nav-item"><a href="#" class="nav-link">Support</a>
+                                                </li>
+                                                </li>
+                                                <li class="nav-item"><a href="\logout" class="nav-link">Logout</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1040,12 +1042,6 @@
                             <div class="breadcome-list">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="breadcome-heading">
-                                            <form role="search" class="sr-input-func">
-                                                <input type="text" placeholder="Search..." class="search-int form-control">
-                                                <a href="#"><i class="fa fa-search"></i></a>
-                                            </form>
-                                        </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <ul class="breadcome-menu">
