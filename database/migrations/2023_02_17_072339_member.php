@@ -13,11 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('barang', function (Blueprint $table) {
-            $table->id('id_barang');
-            $table->string('nama_barang');
-            $table->integer('stock');
-            $table->integer('harga');
+        Schema::create('member', function (Blueprint $table) {
+            $table->id('id');
+            $table->string('nama_member');
+            $table->string('email')->unique();
+            $table->integer('usia');
+            $table->enum('jenis_kelamin',['L','P']);
+            $table->string('alamat');
+            $table->string('nomor_telepon');
+            $table->integer('barcode');
+            $table->enum('level',['Silver','Gold','Platinum'])->default('Silver');
             $table->rememberToken();
             $table->timestamps();
             $table->foreignId('created_by')->nullable(true)->references('id')->on('users')->onDelete('cascade');

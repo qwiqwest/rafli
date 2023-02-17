@@ -19,15 +19,13 @@ return new class extends Migration
             $table->string('name_lengkap');
             $table->enum('jk',['L','P']);
             $table->string('alamat');
-            $table->string('nomor_tlp');
+            $table->string('nomor_telepon');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('role',['admin','kasir'])->default('kasir');
             $table->rememberToken();
             $table->timestamps();
-            $table->foreignId('created_by')->nullable(true)->references('id')->on('users')->onDelete('cascade');
-            $table->foreignId('updated_by')->nullable(true)->references('id')->on('users')->onDelete('cascade');
         });
     }
 

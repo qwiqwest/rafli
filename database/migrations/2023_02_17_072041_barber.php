@@ -13,12 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('vendor', function (Blueprint $table) {
-            $table->id('id_vendor');
-            $table->string('nama_vendor');
-            $table->string('email');
-            $table->string('nomor_tlp');
+        Schema::create('barber', function (Blueprint $table) {
+            $table->id('id');
+            $table->string('nama_lengkap');
+            $table->string('email')->unique();
+            $table->integer('usia');
+            $table->enum('jenis_kelamin',['L','P']);
             $table->string('alamat');
+            $table->string('nomor_telepon');
             $table->rememberToken();
             $table->timestamps();
             $table->foreignId('created_by')->nullable(true)->references('id')->on('users')->onDelete('cascade');
@@ -33,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vendor');
+        Schema::dropIfExists('barang');
     }
 };
