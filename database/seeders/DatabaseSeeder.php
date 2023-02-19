@@ -119,5 +119,12 @@ class DatabaseSeeder extends Seeder
         'level' => 'Platinum',
     ],]
     );
+
+    DB::table('transaksi')->insert([
+        'kasir_id' => '2',
+        'total_harga' => '500000',
+        'sistem_pembayaran' => 'Credit/Debit',
+        'waktu' => '',
+    ],);
     }
 }
