@@ -26,4 +26,5 @@ Route::get('/admin', [LoginController::class,'adminn'])->name('admin')->middlewa
 //     return view('welcome');
 // });
 Route::get('/barang', [BarangController::class, 'index']);
+Route::get('/tambah-barang', [BarangController::class, 'create']);
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');

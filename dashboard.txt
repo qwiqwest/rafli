@@ -1,29 +1,10 @@
 https://github.com/puikinsh/kiaalap
 
 
-yang dibutuhkan dalam database
-1. barber :
--id
--nama lengkap
--usia
--jenis kelamin
--jk
--alamat
--nomor telepon
--email
-
-2. barang :
--id
--nama barang
--stock
--harga
-
-3. member :
--id
--nama member
--email
--alamat
--nomor telepon
--barcode
--level
--jenis kelamin
+@foreach ($data as $barang)
+                            <div class="student-dtl">
+                                <li><h2><td>{{ $barang->nama_barang }}</td></h2></li>
+                                <li><p class="dp"><td>Rp. {{ $barang->harga }}</td></p></li>
+                                <li><p class="dp-ag"><b>Stock:</b><td> {{ $barang->stock }}</td></p></li>
+                            </div>
+                            @endforeach

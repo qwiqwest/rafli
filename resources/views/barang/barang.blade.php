@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -9,79 +9,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/image/flow.png') }}">
-    <!-- Google Fonts
-		============================================ -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-    <!-- Bootstrap CSS
-	    ============================================ -->
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
-    <!-- Bootstrap CSS
-        ============================================ -->
-    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css')}}">
-    <!-- owl.carousel CSS
-	    ============================================ -->
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.transitions.css')}}">
-    <!-- animate CSS
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/image/flow.png') }}">
+        <!-- Google Fonts
             ============================================ -->
-            <link rel="stylesheet" href="{{ asset('assets/css/animate.css')}}">
-            <!-- normalize CSS
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+        <!-- Bootstrap CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
+        <!-- Bootstrap CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css')}}">
+        <!-- owl.carousel CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/css/owl.transitions.css')}}">
+        <!-- animate CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/animate.css')}}">
+        <!-- normalize CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/normalize.css')}}">
+        <!-- meanmenu icon CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.min.css')}}">
+        <!-- main CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/main.css')}}">
+        <!-- educate icon CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/educate-custon-icon.css')}}">
+        <!-- morrisjs CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/morrisjs/morris.css')}}">
+        <!-- mCustomScrollbar CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/scrollbar/jquery.mCustomScrollbar.min.css')}}">
+        <!-- metisMenu CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/metisMenu/metisMenu.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/css/metisMenu/metisMenu-vertical.css')}}">
+        <!-- calendar CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/calendar/fullcalendar.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('assets/css/calendar/fullcalendar.print.min.css')}}">
+        <!-- x-editor CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/editor/select2.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/editor/datetimepicker.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/editor/bootstrap-editable.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/editor/x-editor-style.css') }}">
+        <!-- normalize CSS
                 ============================================ -->
-            <link rel="stylesheet" href="{{ asset('assets/css/normalize.css')}}">
-            <!-- meanmenu icon CSS
-                ============================================ -->
-            <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.min.css')}}">
-            <!-- main CSS
-                ============================================ -->
-            <link rel="stylesheet" href="{{ asset('assets/css/main.css')}}">
-            <!-- educate icon CSS
-                ============================================ -->
-            <link rel="stylesheet" href="{{ asset('assets/css/educate-custon-icon.css')}}">
-            <!-- morrisjs CSS
-                ============================================ -->
-            <link rel="stylesheet" href="{{ asset('assets/css/morrisjs/morris.css')}}">
-            <!-- mCustomScrollbar CSS
-                ============================================ -->
-            <link rel="stylesheet" href="{{ asset('assets/css/scrollbar/jquery.mCustomScrollbar.min.css')}}">
-            <!-- metisMenu CSS
-                ============================================ -->
-            <link rel="stylesheet" href="{{ asset('assets/css/metisMenu/metisMenu.min.css')}}">
-            <link rel="stylesheet" href="{{ asset('assets/css/metisMenu/metisMenu-vertical.css')}}">
-            <!-- calendar CSS
-                ============================================ -->
-            <link rel="stylesheet" href="{{ asset('assets/css/calendar/fullcalendar.min.css')}}">
-            <link rel="stylesheet" href="{{ asset('assets/css/calendar/fullcalendar.print.min.css')}}">
-            <!-- style CSS
-                ============================================ -->
-            <link rel="stylesheet" href="{{ asset('assets/css/style/style.css')}}">
-            <!-- responsive CSS
-                ============================================ -->
-            <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}">
-            <!-- modernizr JS
-                ============================================ -->
-            <script src="{{ asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>    
-    </head>
+        <link rel="stylesheet" href="{{ asset('assets/css/data-table/bootstrap-table.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/data-table/bootstrap-editable.css') }}">
+        <!-- style CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/style/style.css')}}">
+        <!-- responsive CSS
+            ============================================ -->
+        <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}">
+        <!-- modernizr JS
+            ============================================ -->
+        <script src="{{ asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+</head>
 
 <body>
     <!-- sidebar -->
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="/dasboard"><img class="main-logo" src="assets/image/logo.svg" width="200px" height="60px" alt="" /></a>
-                <strong><a href="/dasboard"><img src="assets/image/flow.png" width="200px" height="60px" alt="" /></a></strong>
+                <a href="{{ URL('/dasboard') }}"><img class="main-logo" src="assets/image/logo.svg" width="200px" height="60px" alt="" /></a>
+                <strong><a href="{{ URL('/dasboard') }}"><img src="assets/image/flow.png" width="200px" height="60px" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li>
-                            <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Students</span></a>
+                            <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Barang</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Students" href="all-students.html"><span class="mini-sub-pro">All Students</span></a></li>
-                                <li><a title="Add Students" href="add-student.html"><span class="mini-sub-pro">Add Student</span></a></li>
-                                <li><a title="Edit Students" href="edit-student.html"><span class="mini-sub-pro">Edit Student</span></a></li>
-                                <li><a title="Students Profile" href="student-profile.html"><span class="mini-sub-pro">Student Profile</span></a></li>
+                                <li><a title="All Students" href="{{ URL('/barang') }}"><span class="mini-sub-pro">Semua Barang</span></a></li>
+                                <li><a title="Add Students" href="{{ URL('/tambah-barang') }}"><span class="mini-sub-pro">Tambah Barang</span></a></li>
                             </ul>
                         </li>
                         <li>
@@ -233,6 +241,9 @@
                                                     </div>
                                                 </li>
                                                 <li class="nav-item"><a href="#" class="nav-link">Support</a>
+                                                </li>
+                                                </li>
+                                                <li class="nav-item"><a href="\logout" class="nav-link">Logout</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1016,7 +1027,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="breadcome-list">
+                            <div class="breadcome-list single-page-breadcome">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="breadcome-heading">
@@ -1030,7 +1041,7 @@
                                         <ul class="breadcome-menu">
                                             <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">All Students</span>
+                                            <li><span class="bread-blod">Data Table</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -1041,32 +1052,56 @@
                 </div>
             </div>
         </div>
-        <div class="contacts-area mg-b-15">
+        <!-- Static Table Start -->
+        <div class="data-table-area mg-b-15">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="student-inner-std res-mg-b-30">
-                            <div class="student-img">
-                                <img src="img/student/1.jpg" alt="" />
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="sparkline13-list">
+                            <div class="sparkline13-hd">
+                                <div class="main-sparkline13-hd">
+                                    <h1>Projects <span class="table-project-n">Data</span> Table</h1>
+                                </div>
                             </div>
-                            @foreach ($data as $barang)
-                            <div class="student-dtl">
-                                <h2>{{ $barang->nama_barang }}</h2>
-                                <p class="dp">RP.{{ $barang->harga }}</p>
-                                <p class="dp-ag"><b>Stock:</b> {{ $barang->stock }}</p>
+                            <div class="sparkline13-graph">
+                                <div class="datatable-dashv1-list custom-datatable-overright">
+                                    <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                        data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                        <thead>
+                                            <tr>
+                                                <th data-field="state" data-checkbox="true"></th>
+                                                <th data-field="id">ID</th>
+                                                <th data-field="name" data-editable="true">Nama Barang</th>
+                                                <th data-field="email" data-editable="true">Harga</th>
+                                                <th data-field="phone" data-editable="true">Stock</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach ($data as $barang)
+                                            <tr>
+                                                <td></td>
+                                                <td>{{ $barang->id_barang }}</td>
+                                                <td>{{ $barang->nama_barang }}</td>
+                                                <td>Rp. {{ $barang->harga }}</td>
+                                                <td>{{ $barang->stock }}</td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Static Table End -->
         <div class="footer-copyright-area">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
+                            <p>Copyright © 2023. All rights reserved. By M Rafli Abdillah</p>
                         </div>
                     </div>
                 </div>
@@ -1111,30 +1146,41 @@
             ============================================ -->
         <script src="{{ asset('assets/js/metisMenu/metisMenu.min.js')}}"></script>
         <script src="{{ asset('assets/js/metisMenu/metisMenu-active.js')}}"></script>
-        <!-- morrisjs JS
+        <!-- data table JS
             ============================================ -->
-        <script src="{{ asset('assets/js/morrisjs/raphael-min.js')}}"></script>
-        <script src="{{ asset('assets/js/morrisjs/morris.js')}}"></script>
-        <script src="{{ asset('assets/js/morrisjs/home3-active.js')}}"></script>
-        <!-- morrisjs JS
+        <script src="{{ asset('assets/js/data-table/bootstrap-table.js') }}"></script>
+        <script src="{{ asset('assets/js/data-table/tableExport.js') }}"></script>
+        <script src="{{ asset('assets/js/data-table/data-table-active.js') }}"></script>
+        <script src="{{ asset('assets/js/data-table/bootstrap-table-editable.js') }}"></script>
+        <script src="{{ asset('assets/js/data-table/bootstrap-editable.js') }}"></script>
+        <script src="{{ asset('assets/js/data-table/bootstrap-table-resizable.js') }}"></script>
+        <script src="{{ asset('assets/js/data-table/colResizable-1.5.source.js') }}"></script>
+        <script src="{{ asset('assets/js/data-table/bootstrap-table-export.js') }}"></script>
+        <!--  editable JS
             ============================================ -->
-        <script src="{{ asset('assets/js/sparkline/jquery.sparkline.min.js')}}"></script>
-        <script src="{{ asset('assets/js/sparkline/jquery.charts-sparkline.js')}}"></script>
-        <script src="{{ asset('assets/js/sparkline/sparkline-active.js')}}"></script>
-        <!-- calendar JS
+        <script src="{{ asset('assets/js/editable/jquery.mockjax.js') }}"></script>
+        <script src="{{ asset('assets/js/editable/mock-active.js') }}"></script>
+        <script src="{{ asset('assets/js/editable/select2.js') }}"></script>
+        <script src="{{ asset('assets/js/editable/moment.min.js') }}"></script>
+        <script src="{{ asset('assets/js/editable/bootstrap-datetimepicker.js') }}"></script>
+        <script src="{{ asset('assets/js/editable/bootstrap-editable.js') }}"></script>
+        <script src="{{ asset('assets/js/editable/xediable-active.js') }}"></script>
+        <!-- Chart JS
             ============================================ -->
-        <script src="{{ asset('assets/js/calendar/moment.min.js')}}"></script>
-        <script src="{{ asset('assets/js/calendar/fullcalendar.min.js')}}"></script>
-        <script src="{{ asset('assets/js/calendar/fullcalendar-active.js')}}"></script>
+        <script src="{{ asset('assets/js/chart/jquery.peity.min.js') }}"></script>
+        <script src="{{ asset('assets/js/peity/peity-active.js') }}"></script>
+        <!-- tab JS
+            ============================================ -->
+        <script src="{{ asset('assets/js/tab.js') }}"></script>
         <!-- plugins JS
             ============================================ -->
-        <script src="{{ asset('assets/js/plugins.js')}}"></script>
+        <script src="{{ asset('assets/js/plugins.js') }}"></script>
         <!-- main JS
             ============================================ -->
-        <script src="{{ asset('assets/js/main.js')}}"></script>
+        <script src="{{ asset('assets/js/main.js') }}"></script>
         <!-- tawk chat JS
             ============================================ -->
-        <script src="{{ asset('assets/js/tawk-chat.js')}}"></script>
+        <script src="{{ asset('assets/js/tawk-chat.js') }}"></script>
 </body>
 
 </html>
