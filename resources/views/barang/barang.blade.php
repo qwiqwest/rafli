@@ -1,76 +1,76 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="zxx">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CashFlow | Dashboard</title>
+    <title>CashFlow | Barang</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/image/flow.png') }}">
-        <!-- Google Fonts
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/image/flow.png') }}">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+	    ============================================ -->
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
+    <!-- Bootstrap CSS
+        ============================================ -->
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css')}}">
+    <!-- owl.carousel CSS
+	    ============================================ -->
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.transitions.css')}}">
+    <!-- animate CSS
             ============================================ -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-        <!-- Bootstrap CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
-        <!-- Bootstrap CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css')}}">
-        <!-- owl.carousel CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/owl.carousel.css')}}">
-        <link rel="stylesheet" href="{{ asset('assets/css/owl.theme.css')}}">
-        <link rel="stylesheet" href="{{ asset('assets/css/owl.transitions.css')}}">
-        <!-- animate CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/animate.css')}}">
-        <!-- normalize CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/normalize.css')}}">
-        <!-- meanmenu icon CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.min.css')}}">
-        <!-- main CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/main.css')}}">
-        <!-- educate icon CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/educate-custon-icon.css')}}">
-        <!-- morrisjs CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/morrisjs/morris.css')}}">
-        <!-- mCustomScrollbar CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/scrollbar/jquery.mCustomScrollbar.min.css')}}">
-        <!-- metisMenu CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/metisMenu/metisMenu.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('assets/css/metisMenu/metisMenu-vertical.css')}}">
-        <!-- calendar CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/calendar/fullcalendar.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('assets/css/calendar/fullcalendar.print.min.css')}}">
-        <!-- style CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/style/style.css')}}">
-        <!-- responsive CSS
-            ============================================ -->
-        <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}">
-        <!-- modernizr JS
-            ============================================ -->
-        <script src="{{ asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>    
-</head>
+            <link rel="stylesheet" href="{{ asset('assets/css/animate.css')}}">
+            <!-- normalize CSS
+                ============================================ -->
+            <link rel="stylesheet" href="{{ asset('assets/css/normalize.css')}}">
+            <!-- meanmenu icon CSS
+                ============================================ -->
+            <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.min.css')}}">
+            <!-- main CSS
+                ============================================ -->
+            <link rel="stylesheet" href="{{ asset('assets/css/main.css')}}">
+            <!-- educate icon CSS
+                ============================================ -->
+            <link rel="stylesheet" href="{{ asset('assets/css/educate-custon-icon.css')}}">
+            <!-- morrisjs CSS
+                ============================================ -->
+            <link rel="stylesheet" href="{{ asset('assets/css/morrisjs/morris.css')}}">
+            <!-- mCustomScrollbar CSS
+                ============================================ -->
+            <link rel="stylesheet" href="{{ asset('assets/css/scrollbar/jquery.mCustomScrollbar.min.css')}}">
+            <!-- metisMenu CSS
+                ============================================ -->
+            <link rel="stylesheet" href="{{ asset('assets/css/metisMenu/metisMenu.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('assets/css/metisMenu/metisMenu-vertical.css')}}">
+            <!-- calendar CSS
+                ============================================ -->
+            <link rel="stylesheet" href="{{ asset('assets/css/calendar/fullcalendar.min.css')}}">
+            <link rel="stylesheet" href="{{ asset('assets/css/calendar/fullcalendar.print.min.css')}}">
+            <!-- style CSS
+                ============================================ -->
+            <link rel="stylesheet" href="{{ asset('assets/css/style/style.css')}}">
+            <!-- responsive CSS
+                ============================================ -->
+            <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}">
+            <!-- modernizr JS
+                ============================================ -->
+            <script src="{{ asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>    
+    </head>
 
 <body>
     <!-- sidebar -->
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="{{ URL('/dasboard') }}"><img class="main-logo" src="assets/image/logo.svg" width="200px" height="60px" alt="" /></a>
-                <strong><a href="{{ URL('/dasboard') }}"><img src="assets/image/flow.png" width="200px" height="60px" alt="" /></a></strong>
+                <a href="/dasboard"><img class="main-logo" src="assets/image/logo.svg" width="200px" height="60px" alt="" /></a>
+                <strong><a href="/dasboard"><img src="assets/image/flow.png" width="200px" height="60px" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
@@ -78,7 +78,7 @@
                         <li>
                             <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Students</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Students" href="{{ URL('/barang') }}"><span class="mini-sub-pro">All Students</span></a></li>
+                                <li><a title="All Students" href="all-students.html"><span class="mini-sub-pro">All Students</span></a></li>
                                 <li><a title="Add Students" href="add-student.html"><span class="mini-sub-pro">Add Student</span></a></li>
                                 <li><a title="Edit Students" href="edit-student.html"><span class="mini-sub-pro">Edit Student</span></a></li>
                                 <li><a title="Students Profile" href="student-profile.html"><span class="mini-sub-pro">Student Profile</span></a></li>
@@ -195,7 +195,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro">
-                        <a href="index.html"><img class="main-logo" src="" height="60px" width="200px" alt="" /></a>
+                        <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -233,9 +233,6 @@
                                                     </div>
                                                 </li>
                                                 <li class="nav-item"><a href="#" class="nav-link">Support</a>
-                                                </li>
-                                                </li>
-                                                <li class="nav-item"><a href="\logout" class="nav-link">Logout</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -837,9 +834,31 @@
                             <div class="mobile-menu">
                                 <nav id="dropdown">
                                     <ul class="mobile-menu-nav">
+                                        <li><a data-toggle="collapse" data-target="#Charts" href="#">Home <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul class="collapse dropdown-header-top">
+                                                <li><a href="index.html">Dashboard v.1</a></li>
+                                                <li><a href="index-1.html">Dashboard v.2</a></li>
+                                                <li><a href="index-3.html">Dashboard v.3</a></li>
+                                                <li><a href="analytics.html">Analytics</a></li>
+                                                <li><a href="widgets.html">Widgets</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="events.html">Event</a></li>
+                                        <li><a data-toggle="collapse" data-target="#demoevent" href="#">Professors <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="demoevent" class="collapse dropdown-header-top">
+                                                <li><a href="all-professors.html">All Professors</a>
+                                                </li>
+                                                <li><a href="add-professor.html">Add Professor</a>
+                                                </li>
+                                                <li><a href="edit-professor.html">Edit Professor</a>
+                                                </li>
+                                                <li><a href="professor-profile.html">Professor Profile</a>
+                                                </li>
+                                            </ul>
+                                        </li>
                                         <li><a data-toggle="collapse" data-target="#demopro" href="#">Students <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul id="demopro" class="collapse dropdown-header-top">
-                                                <li><a href="/barang">All Students</a>
+                                                <li><a href="all-students.html">All Students</a>
                                                 </li>
                                                 <li><a href="add-student.html">Add Student</a>
                                                 </li>
@@ -883,8 +902,8 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li><a data-toggle="collapse" data-target="#demo" href="#">Mailbox <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            <ul id="demo" class="collapse dropdown-header-top">
+                                        <li><a data-toggle="collapse" data-target="#demomi" href="#">Mailbox <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="demomi" class="collapse dropdown-header-top">
                                                 <li><a href="mailbox.html">Inbox</a>
                                                 </li>
                                                 <li><a href="mailbox-view.html">View Mail</a>
@@ -1000,12 +1019,18 @@
                             <div class="breadcome-list">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="breadcome-heading">
+                                            <form role="search" class="sr-input-func">
+                                                <input type="text" placeholder="Search..." class="search-int form-control">
+                                                <a href="#"><i class="fa fa-search"></i></a>
+                                            </form>
+                                        </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <ul class="breadcome-menu">
                                             <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">Dashboard V.1</span>
+                                            <li><span class="bread-blod">All Students</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -1016,104 +1041,108 @@
                 </div>
             </div>
         </div>
-        <div class="analytics-sparkle-area">
+        <div class="contacts-area mg-b-15">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="analytics-sparkle-line reso-mg-b-30">
-                            <div class="analytics-content">
-                                <h5>Computer Technologies</h5>
-                                <h2>$<span class="counter">5000</span> <span class="tuition-fees">Tuition Fees</span></h2>
-                                <span class="text-success">20%</span>
-                                <div class="progress m-b-0">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:20%;"> <span class="sr-only">20% Complete</span> </div>
-                                </div>
+                        <div class="student-inner-std res-mg-b-30">
+                            <div class="student-img">
+                                <img src="img/student/1.jpg" alt="" />
+                            </div>
+                            @foreach ($data as $barang)
+                            <div class="student-dtl">
+                                <h2>{{ $barang->barang->nama_barang }}</h2>
+                                <p class="dp">{{ $barang->barang->harga }}</p>
+                                <p class="dp-ag"><b>Stock:</b> {{ $barang->barang->stock }}</p>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="student-inner-std res-mg-b-30">
+                            <div class="student-img">
+                                <img src="img/student/2.jpg" alt="" />
+                            </div>
+                            <div class="student-dtl">
+                                <h2>Alexam Angles</h2>
+                                <p class="dp">Computer Science</p>
+                                <p class="dp-ag"><b>Age:</b> 20 Years</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="analytics-sparkle-line reso-mg-b-30">
-                            <div class="analytics-content">
-                                <h5>Accounting Technologies</h5>
-                                <h2>$<span class="counter">3000</span> <span class="tuition-fees">Tuition Fees</span></h2>
-                                <span class="text-danger">30%</span>
-                                <div class="progress m-b-0">
-                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:30%;"> <span class="sr-only">230% Complete</span> </div>
-                                </div>
+                        <div class="student-inner-std res-mg-b-30 res-tablet-mg-t-30 dk-res-t-pro-30">
+                            <div class="student-img">
+                                <img src="img/student/3.jpg" alt="" />
+                            </div>
+                            <div class="student-dtl">
+                                <h2>Alexam Angles</h2>
+                                <p class="dp">Computer Science</p>
+                                <p class="dp-ag"><b>Age:</b> 20 Years</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="analytics-sparkle-line reso-mg-b-30 table-mg-t-pro dk-res-t-pro-30">
-                            <div class="analytics-content">
-                                <h5>Electrical Engineering</h5>
-                                <h2>$<span class="counter">2000</span> <span class="tuition-fees">Tuition Fees</span></h2>
-                                <span class="text-info">60%</span>
-                                <div class="progress m-b-0">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%;"> <span class="sr-only">20% Complete</span> </div>
-                                </div>
+                        <div class="student-inner-std res-tablet-mg-t-30 dk-res-t-pro-30">
+                            <div class="student-img">
+                                <img src="img/student/4.jpg" alt="" />
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="analytics-sparkle-line table-mg-t-pro dk-res-t-pro-30">
-                            <div class="analytics-content">
-                                <h5>Chemical Engineering</h5>
-                                <h2>$<span class="counter">3500</span> <span class="tuition-fees">Tuition Fees</span></h2>
-                                <span class="text-inverse">80%</span>
-                                <div class="progress m-b-0">
-                                    <div class="progress-bar progress-bar-inverse" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:80%;"> <span class="sr-only">230% Complete</span> </div>
-                                </div>
+                            <div class="student-dtl">
+                                <h2>Alexam Angles</h2>
+                                <p class="dp">Computer Science</p>
+                                <p class="dp-ag"><b>Age:</b> 20 Years</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="product-sales-area mg-tb-30">
-            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-                        <div class="product-sales-chart">
-                            <div class="portlet-title">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="caption pro-sl-hd">
-                                            <span class="caption-subject"><b>University Earnings</b></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="actions graph-rp graph-rp-dl">
-                                            <p>All Earnings are in million $</p>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="student-inner-std mg-t-30">
+                            <div class="student-img">
+                                <img src="img/student/1.jpg" alt="" />
                             </div>
-                            <ul class="list-inline cus-product-sl-rp">
-                                <li>
-                                    <h5><i class="fa fa-circle" style="color: #006DF0;"></i>CSE</h5>
-                                </li>
-                                <li>
-                                    <h5><i class="fa fa-circle" style="color: #933EC5;"></i>Accounting</h5>
-                                </li>
-                                <li>
-                                    <h5><i class="fa fa-circle" style="color: #65b12d;"></i>Electrical</h5>
-                                </li>
-                            </ul>
-                            <div id="morris-bar-chart" style="height: 356px;"></div>
+                            <div class="student-dtl">
+                                <h2>Alexam Angles</h2>
+                                <p class="dp">Computer Science</p>
+                                <p class="dp-ag"><b>Age:</b> 20 Years</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="product-sales-area mg-tb-30">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-                        {{-- <div class="product-sales-chart"> --}}
-                            <div id="morris-area-chart"></div>
-                        {{-- </div> --}}
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="student-inner-std mg-t-30">
+                            <div class="student-img">
+                                <img src="img/student/2.jpg" alt="" />
+                            </div>
+                            <div class="student-dtl">
+                                <h2>Alexam Angles</h2>
+                                <p class="dp">Computer Science</p>
+                                <p class="dp-ag"><b>Age:</b> 20 Years</p>
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="student-inner-std mg-t-30">
+                            <div class="student-img">
+                                <img src="img/student/3.jpg" alt="" />
+                            </div>
+                            <div class="student-dtl">
+                                <h2>Alexam Angles</h2>
+                                <p class="dp">Computer Science</p>
+                                <p class="dp-ag"><b>Age:</b> 20 Years</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="student-inner-std mg-t-30">
+                            <div class="student-img">
+                                <img src="img/student/4.jpg" alt="" />
+                            </div>
+                            <div class="student-dtl">
+                                <h2>Alexam Angles</h2>
+                                <p class="dp">Computer Science</p>
+                                <p class="dp-ag"><b>Age:</b> 20 Years</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1121,9 +1150,9 @@
         <div class="footer-copyright-area">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2023. All rights reserved. By M Rafli Abdillah</p>
+                            <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
                         </div>
                     </div>
                 </div>
