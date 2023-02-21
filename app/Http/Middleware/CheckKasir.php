@@ -23,9 +23,9 @@ class CheckKasir
             } else if (Auth()->user()->role == 'admin') {
                 return redirect('admin');
             } else {
-                return redirect('/')->with('error','You have no admin access');
+                return redirect('/')->with('error','Kamu belum login');
             }
         }
-        return redirect('/')->with('error','You have no admin access');
+        return redirect('/')->with('error','Kamu belum login');
     }
 }

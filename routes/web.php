@@ -23,15 +23,15 @@ Route::get('/', function(){
 });
 
 // Route::middleware('checkadmin')->group(function() {
-    Route::get('/admin', [LoginController::class,'adminn'])->name('admin')->middleware('checkadmin');
+    Route::post('/dasboard ', [LoginController::class,'login'])->name('dasboard');
 
     //barang
     Route::get('/barang', [BarangController::class, 'index']);
     Route::get('/tambah-barang', [BarangController::class, 'create']);
     Route::get('/barang/edit/{id_barang}', [BarangController::class, 'index']);
     Route::delete('/barang/delete/{id_barang}', [BarangController::class, 'delete']);
-    Route::get('/dasboard', [Beranda::class,'index'])->middleware('checkadmin');
-    Route::post('/dasboard', [Beranda::class,'index']);  
+    Route::get('/admin', [Beranda::class,'admin'])->middleware('checkadmin');
+    Route::get('/kasir', [Beranda::class,'kasir'])->middleware('checkkasir');
 // });/
 
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');

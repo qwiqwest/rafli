@@ -20,11 +20,11 @@ class CheckAdmin
             if (Auth()->user()->role == 'admin') {
                 return $next($request);
             } else if (Auth()->user()->role == 'kasir') {
-                return redirect('cashier');
+                return redirect('kasir');
             } else {
-                // return redirect('/')->with('fail','You have no admin access');
+                return redirect('/')->with('error','Kamu belum login');
             }
-            return redirect('/')->with('error','You have no admin access');
+            return redirect('/')->with('error','Kamu belum login');
         }
     }
 }
