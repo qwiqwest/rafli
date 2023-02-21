@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 class CheckAdmin
 {
     /**
@@ -24,7 +25,7 @@ class CheckAdmin
             } else {
                 return redirect('/')->with('error','Kamu belum login');
             }
-            return redirect('/')->with('error','Kamu belum login');
         }
+        return redirect('/')->with('error','Kamu belum login');
     }
 }
