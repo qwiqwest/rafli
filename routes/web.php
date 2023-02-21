@@ -22,19 +22,14 @@ Route::get('/', function(){
     return view('login.login');
 });
 
-// Route::middleware('checkadmin')->group(function() {
-    Route::post('/dasboard ', [LoginController::class,'login'])->name('dasboard');
+Route::post('/dasboard ', [LoginController::class,'login'])->name('dasboard');
 
-    //barang
-    Route::get('/barang', [BarangController::class, 'index']);
-    Route::get('/tambah-barang', [BarangController::class, 'create']);
-    Route::get('/barang/edit/{id_barang}', [BarangController::class, 'index']);
-    Route::delete('/barang/delete/{id_barang}', [BarangController::class, 'delete']);
-    Route::get('/admin', [Beranda::class,'admin'])->middleware('checkadmin');
-    Route::get('/kasir', [Beranda::class,'kasir'])->middleware('checkkasir');
-// });/
-
+//barang
+Route::get('/barang', [BarangController::class, 'index']);
+Route::get('/tambah-barang', [BarangController::class, 'create']);
+Route::get('/barang/edit/{id_barang}', [BarangController::class, 'index']);
+Route::delete('/barang/delete/{id_barang}', [BarangController::class, 'delete']);
+Route::get('/admin', [Beranda::class,'admin'])->middleware('checkadmin');
+Route::get('/kasir', [Beranda::class,'kasir'])->middleware('checkkasir');
+    
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');
-// Route::post('/dashboard', function () {
-//     return view('welcome');
-// });
