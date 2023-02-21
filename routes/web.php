@@ -16,15 +16,25 @@ use PhpParser\Node\Expr\FuncCall;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//login
 Route::get('/', function(){
     return view('login.login');
 });
-Route::get('/dasboard', [LoginController::class,'login'])->name('dasboard');
-Route::post('/dasboard', [LoginController::class,'login'])->name('dasboard');
-Route::get('/admin', [LoginController::class,'adminn'])->name('admin')->middleware('checkrole');
+
+// Route::middleware('checkadmin')->group(function() {
+    Route::get('/admin', [LoginController::class,'adminn'])->name('admin')->middleware('checkadmin');
+
+    //barang
+    Route::get('/barang', [BarangController::class, 'index']);
+    Route::get('/tambah-barang', [BarangController::class, 'create']);
+    Route::get('/barang/edit/{id_barang}', [BarangController::class, 'index']);
+    Route::delete('/barang/delete/{id_barang}', [BarangController::class, 'delete']);
+    Route::get('/dasboard', [Beranda::class,'index'])->middleware('checkadmin');
+    Route::post('/dasboard', [Beranda::class,'index']);  
+// });/
+
+Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 // Route::post('/dashboard', function () {
 //     return view('welcome');
 // });
-Route::get('/barang', [BarangController::class, 'index']);
-Route::get('/tambah-barang', [BarangController::class, 'create']);
-Route::get('/logout', [LoginController::class,'logout'])->name('logout');

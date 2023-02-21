@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class Beranda extends Controller
 {
     public function index(){
-        echo 'Ini adalah halaman beranda';
+        return view ('welcome');
     }
 }

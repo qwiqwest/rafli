@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/image/flow.png') }}"/>
 </head>
 <body>
-<form id="login_form" class="form_class" action="{{route('dasboard')}}" method="post">
+<form id="login_form" class="form_class" action="{{url('dasboard')}}" method="post">
             @csrf
 <div class="login-wrap">
 	<div class="login-html">
@@ -49,6 +49,17 @@
 			  position: 'top-center',
 			  icon: 'error',
 			  title: '{{Session::get('error')}}',
+			  showConfirmButton: false,
+			  timer: 1500 
+		})
+	 </script>
+	@endif
+	@if(Session::has("success"))
+	<script>
+		Swal.fire({
+			  position: 'top-center',
+			  icon: 'success',
+			  title: '{{Session::get('success')}}',
 			  showConfirmButton: false,
 			  timer: 1500 
 		})

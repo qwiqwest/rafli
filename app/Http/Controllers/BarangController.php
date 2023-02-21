@@ -19,7 +19,7 @@ class BarangController extends Controller
         Barang::create($request->except('_token'));
 
         session()->flash('message', 'Data is added');
-        return redirect('/tambah-barang');
+        return redirect('/barang');
     }
 
     // update barang
@@ -29,7 +29,7 @@ class BarangController extends Controller
         $data->update($request->except(['_token']));
 
         session()->flash("message", "Data is updated");
-        return redirect('/tambah-barang');
+        return redirect('/barang');
     }
 
     //delete barang
@@ -39,6 +39,6 @@ class BarangController extends Controller
         $barangDelete->delete();
 
         session()->flash("message", "Data is deleted");
-        return redirect('/tambah-barang');
+        return redirect('/barang');
     }
 }
