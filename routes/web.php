@@ -22,12 +22,14 @@ Route::get('/', function(){
     return view('login.login');
 });
 
+Route::get('/test', [BarangController::class, 'test']);
+
 Route::post('/dasboard ', [LoginController::class,'login'])->name('dasboard');
 
 //barang
-Route::get('/barang', [BarangController::class, 'index']);
-Route::get('/tambah-barang', [BarangController::class, 'create']);
-Route::get('/barang/edit/{id_barang}', [BarangController::class, 'index']);
+Route::get('/barang', [BarangController::class, 'index'])->middleware('checkadmin');
+Route::get('/tambah-barang', [BarangController::class, 'create'])->middleware('checkadmin');
+Route::get('/barang/edit/{id_barang}', [BarangController::class, 'index'])->middleware('checkadmin');
 Route::delete('/barang/delete/{id_barang}', [BarangController::class, 'delete']);
 Route::get('/admin', [Beranda::class,'admin'])->middleware('checkadmin');
 Route::get('/kasir', [Beranda::class,'kasir'])->middleware('checkkasir');
