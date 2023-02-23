@@ -9,7 +9,7 @@
 @section('page')
     Dashboard
 @endsection
-<div class="product-status mg-b-15">
+<div class="product-status ">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -45,6 +45,8 @@
                                 <td>{{ $barang->stock }}</td>
                                 <td>
                                     <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    @method('delete')
+                                    @csrf
                                     <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
@@ -66,6 +68,31 @@
         </div>
     </div>
 </div>
+
+{{-- sweetalert --}}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@if(Session::has("error"))
+<script>
+    Swal.fire({
+          position: 'top-center',
+          icon: 'error',
+          title: '{{Session::get('error')}}',
+          showConfirmButton: false,
+          timer: 1500 
+    })
+ </script>
+@endif
+@if(Session::has("success"))
+<script>
+    Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: '{{Session::get('success')}}',
+          showConfirmButton: false,
+          timer: 1500 
+    })
+ </script>
+@endif
 @endsection
 @section('customscript')
  <!-- data table JS

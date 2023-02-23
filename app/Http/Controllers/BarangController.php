@@ -27,7 +27,7 @@ class BarangController extends Controller
         Barang::create($request->except('_token'));
 
         session()->flash('success', 'Data is added');
-        return redirect('/barang');
+        return redirect('/barang')->with('success','Data berhasil ditambah');
     }
 
     public function edit($id)
@@ -44,7 +44,7 @@ class BarangController extends Controller
         $data->update($request->except(['_token']));
 
         session()->flash("success", "Data is updated");
-        return redirect('/barang');
+        return redirect('/barang')->with('success','Data berhasil ditambah');
     }
 
     //delete barang
