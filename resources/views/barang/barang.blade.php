@@ -14,9 +14,9 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="product-status-wrap" data-search="true">
-                    <h4>Library List</h4>
+                    <h4>List Barang</h4>
                     <div class="add-product">
-                        <a href="#">Add Library</a>
+                        <a href="/barang/tambah-barang">Add Barang</a>
                     </div>
                     <div class="asset-inner">
                         <table data-search="true" id="table" data-pagination="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"

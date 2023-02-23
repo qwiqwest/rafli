@@ -21,17 +21,22 @@ use PhpParser\Node\Expr\FuncCall;
 Route::get('/', function(){
     return view('login.login');
 });
+Route::get('/admin', [Beranda::class,'admin'])->middleware('checkadmin');
+Route::get('/kasir', [Beranda::class,'kasir'])->middleware('checkkasir');
 
-Route::get('/test', [BarangController::class, 'test']);
 
 Route::post('/dasboard ', [LoginController::class,'login'])->name('dasboard');
 
 //barang
 Route::get('/barang', [BarangController::class, 'index'])->middleware('checkadmin');
-Route::get('/tambah-barang', [BarangController::class, 'create'])->middleware('checkadmin');
-Route::get('/barang/edit/{id_barang}', [BarangController::class, 'index'])->middleware('checkadmin');
-Route::delete('/barang/delete/{id_barang}', [BarangController::class, 'delete']);
-Route::get('/admin', [Beranda::class,'admin'])->middleware('checkadmin');
-Route::get('/kasir', [Beranda::class,'kasir'])->middleware('checkkasir');
-    
+Route::get('/barang/tambah-barang', [BarangController::class, 'add'])->middleware('checkadmin');
+Route::get('/barang/tambah-barang/store', [BarangController::class, 'create'])->middleware('checkadmin');
+Route::get('/barang/edit/{id_barang}', [BarangController::class, 'edit'])->middleware('checkadmin');
+Route::get('/barang/edit/{id_barang}/store', [BarangController::class, 'update'])->middleware('checkadmin');
+Route::delete('/barang/delete/{id_barang}', [BarangController::class, 'delete'])->middleware('checkadmin');
+
+//logout
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');
+
+//test
+Route::get('/test', [BarangController::class, 'test']);
