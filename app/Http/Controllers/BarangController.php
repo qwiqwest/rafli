@@ -53,7 +53,7 @@ class BarangController extends Controller
         $barangDelete = Barang::find($id);
         $barangDelete->delete();
 
-        session()->flash("success", "Data is deleted");
+        session()->flash("success", "Data berhasil dihapus");
         return redirect('/barang');
     }
 

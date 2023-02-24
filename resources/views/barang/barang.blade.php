@@ -1,7 +1,7 @@
 @extends('layouts.menu')
 
 @section('title')
-    CashFlow | Dashboard
+    CashFlow | Barang
 @endsection
 
 @section('main')
@@ -45,9 +45,11 @@
                                 <td>{{ $barang->stock }}</td>
                                 <td>
                                     <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                    @method('delete')
-                                    @csrf
-                                    <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                    <form action="/barang/delete/{{ $barang->id_barang }}" method="post">
+                                        @method('delete')
+                                        @csrf
+                                        <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                    </form>    
                                 </td>
                             </tr>
                             @endforeach

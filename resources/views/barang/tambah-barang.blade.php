@@ -1,7 +1,7 @@
 @extends('layouts.menu')
 
 @section('title')
-    CashFlow | Tambah-Barang
+    CashFlow | Tambah Barang
 @endsection
 
 @section('main')
