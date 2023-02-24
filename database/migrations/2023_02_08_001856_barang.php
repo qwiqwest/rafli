@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nama_barang');
             $table->integer('stock');
             $table->integer('harga');
+            $table->integer('barcode');
             $table->rememberToken();
             $table->timestamps();
             $table->foreignId('created_by')->nullable(true)->references('id')->on('users')->onDelete('cascade');

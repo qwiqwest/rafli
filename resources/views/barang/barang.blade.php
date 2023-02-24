@@ -7,7 +7,7 @@
 @section('main')
 
 @section('page')
-    Dashboard
+    Barang
 @endsection
 <div class="product-status ">
     <div class="container-fluid">
@@ -45,7 +45,7 @@
                                 <td>{{ $barang->stock }}</td>
                                 <td>
                                     <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                    <form action="/barang/delete/{{ $barang->id_barang }}" method="post">
+                                    <form action="/barang/delete/{{ $barang->id_barang }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
                                         <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>

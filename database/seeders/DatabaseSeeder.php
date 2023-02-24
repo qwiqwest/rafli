@@ -50,26 +50,31 @@ class DatabaseSeeder extends Seeder
             'nama_barang' => 'Kursi Barber',
             'stock' => '5',
             'harga' => '4000000',
+            'barcode' => '321123123',
         ],
         [
             'nama_barang' => 'Gunting Rambut',
             'stock' => '23',
             'harga' => '12000',
+            'barcode' => '321123124',
         ],
         [
             'nama_barang' => 'Pisau Cukur',
             'stock' => '16',
             'harga' => '30000',
+            'barcode' => '321123125',
         ],
         [
             'nama_barang' => 'Handuk',
             'stock' => '30',
             'harga' => '50000',
+            'barcode' => '321123126',
         ],
         [
             'nama_barang' => 'Mesin Pencukur',
             'stock' => '8',
             'harga' => '1250000',
+            'barcode' => '321123127',
         ],]
     );
 
