@@ -4,6 +4,7 @@ use App\Http\Controllers\Beranda;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\KasirController;
 use PhpParser\Node\Expr\FuncCall;
 
 /*
@@ -34,6 +35,14 @@ Route::post('/barang/tambah-barang/store', [BarangController::class, 'create'])-
 Route::get('/barang/edit/{id_barang}', [BarangController::class, 'edit'])->middleware('checkadmin');
 Route::get('/barang/edit/{id_barang}/store', [BarangController::class, 'update'])->middleware('checkadmin');
 Route::delete('/barang/delete/{id_barang}', [BarangController::class, 'delete'])->middleware('checkadmin');
+
+//barang
+Route::get('/kasir', [KasirController::class, 'index'])->middleware('checkadmin');
+Route::get('/kasir/add', [KasirController::class, 'add'])->middleware('checkadmin');
+Route::post('/kasir/add/store', [KasirController::class, 'create'])->middleware('checkadmin');
+Route::get('/kasir/edit/{id}', [KasirController::class, 'edit'])->middleware('checkadmin');
+Route::get('/kasir/edit/{id}/store', [KasirController::class, 'update'])->middleware('checkadmin');
+Route::delete('/kasir/delete/{id}', [KasirController::class, 'delete'])->middleware('checkadmin');
 
 //logout
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');

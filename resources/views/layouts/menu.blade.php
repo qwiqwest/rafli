@@ -82,8 +82,8 @@
                         <li>
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="fa fa-users icon-wrap"></span> <span class="mini-click-non">Kasir</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Courses" href="all-courses.html"><span class="mini-sub-pro">Semua Kasir</span></a></li>
-                                <li><a title="Add Courses" href="add-course.html"><span class="mini-sub-pro">Tambah Kasir</span></a></li>
+                                <li><a title="All Courses" href="{{ URL('/kasir') }}"><span class="mini-sub-pro">Semua Kasir</span></a></li>
+                                <li><a title="Add Courses" href="{{ URL('/kasir/add') }}"><span class="mini-sub-pro">Tambah Kasir</span></a></li>
                             </ul>
                         </li>
                         <li>
