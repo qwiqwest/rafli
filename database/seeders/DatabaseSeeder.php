@@ -78,32 +78,6 @@ class DatabaseSeeder extends Seeder
         ],]
     );
 
-    DB::table('barber')->insert([[
-        'nama_lengkap' => 'Udin Hasanudin',
-        'email' => 'udin@gmail.com',
-        'usia' => '24',
-        'jenis_kelamin' => 'L',
-        'alamat' => 'Jl. Kenanga No.12',
-        'nomor_telepon' => '08971531234',
-    ],
-    [
-        'nama_lengkap' => 'Marlan Asyifa',
-        'email' => 'asyifa@gmail.com',
-        'usia' => '28',
-        'jenis_kelamin' => 'P',
-        'alamat' => 'Jl. Kota Timur No.231',
-        'nomor_telepon' => '08617452182',
-    ],
-    [
-        'nama_lengkap' => 'Farhan Ar-Marhan',
-        'email' => 'farhan@gmail.com',
-        'usia' => '25',
-        'jenis_kelamin' => 'L',
-        'alamat' => 'Gg. Putri Agung No.13',
-        'nomor_telepon' => '08011221761',
-    ],]
-    );
-
     DB::table('member')->insert([[
         'nama_member' => 'Harlan Maryam',
         'email' => 'harmar@gmail.com',

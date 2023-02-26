@@ -34,7 +34,7 @@ Route::get('/barang/tambah-barang', [BarangController::class, 'add'])->middlewar
 Route::post('/barang/tambah-barang/store', [BarangController::class, 'create'])->middleware('checkadmin');
 Route::get('/barang/edit/{id_barang}', [BarangController::class, 'edit'])->middleware('checkadmin');
 Route::get('/barang/edit/{id_barang}/store', [BarangController::class, 'update'])->middleware('checkadmin');
-Route::delete('/barang/delete/{id_barang}', [BarangController::class, 'delete'])->middleware('checkadmin');
+Route::delete('/barang/delete/{id}', [BarangController::class, 'delete'])->middleware('checkadmin');
 
 //barang
 Route::get('/kasir', [KasirController::class, 'index'])->middleware('checkadmin');

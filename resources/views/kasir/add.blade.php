@@ -35,7 +35,7 @@
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <select class="form-control" name="jk" required>
-                                                                        <option >-- Pilih --</option>
+                                                                        <option >-- Jenis Kelamin --</option>
                                                                         <option value="L">L</option>
                                                                         <option value="P">P</option>
                                                                     </select>

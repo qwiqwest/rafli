@@ -31,6 +31,9 @@
                                                                     <input type="text" class="form-control" placeholder="Nama Barang" id="nama_barang" name="nama_barang">
                                                                 </div>
                                                                 <div class="form-group">
+                                                                    <input type="number" class="form-control" placeholder="Barcode" id="barcode" name="barcode">
+                                                                </div>
+                                                                <div class="form-group">
                                                                     <input type="number" class="form-control" placeholder="Stock" id="stock" name="stock">
                                                                 </div>
                                                                 <div class="form-group">

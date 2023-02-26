@@ -27,6 +27,7 @@
                                 <th data-field="image" data-editable="true">Image</th>
                                 <th data-field="name" data-editable="true">Nama Barang</th>
                                 <th data-field="status" data-editable="true">Status</th>
+                                <th data-field="barcode" data-editable="true">Barcode</th>
                                 <th data-field="harga" data-editable="true">Harga</th>
                                 <th data-field="stock" data-editable="true">Stock</th>
                                 <th data-field="aksi" data-editable="true">Setting</th>
@@ -41,11 +42,12 @@
                                 <td>
                                     <button class="pd-setting">Available</button>
                                 </td>
+                                <td>{{ $barang->barcode }}</td>
                                 <td>Rp.{{ $barang->harga }}</td>
                                 <td>{{ $barang->stock }}</td>
                                 <td>
                                     <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                    <form action="/barang/delete/{{ $barang->id_barang }}" method="post" class="d-inline">
+                                    <form action="/barang/delete/{{ $barang->id }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
                                         <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
