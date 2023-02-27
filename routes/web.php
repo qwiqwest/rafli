@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KasirController;
+use App\Http\Controllers\VendorsController;
 use PhpParser\Node\Expr\FuncCall;
 
 /*
