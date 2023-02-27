@@ -9,3 +9,5 @@
 @section('page')
     Tambah Vendor
 @endsection
+
+@endsection
