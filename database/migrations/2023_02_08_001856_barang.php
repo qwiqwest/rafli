@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('stock');
             $table->integer('harga');
             $table->integer('barcode');
+            $table->foreignId('vendor_id')->nullable(true)->references('id')->on('vendors')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
             $table->foreignId('created_by')->nullable(true)->references('id')->on('users')->onDelete('cascade');

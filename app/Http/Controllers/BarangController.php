@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Barang;
+use App\Models\Vendors;
 
 class BarangController extends Controller
 {
@@ -17,8 +18,9 @@ class BarangController extends Controller
     public function add()
     {
         $data = Barang::all();
+        $vendors = Vendors::all();
 
-        return view('barang.tambah-barang', compact('data'));
+        return view('barang.tambah-barang', compact('data','vendors'));
     }
 
     //add barang
@@ -33,8 +35,9 @@ class BarangController extends Controller
     public function edit($id)
     {
         $barang = Barang::find($id);
+        $vendors = Vendors::all();
 
-        return view('barang.edit', compact('barang'));
+        return view('barang.edit', compact('barang','vendors'));
     }
 
     // update barang

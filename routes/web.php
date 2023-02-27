@@ -31,6 +31,11 @@ Route::post('/dasboard ', [LoginController::class,'login'])->name('dasboard');
 
 //barang
 Route::get('/barang', [BarangController::class, 'index'])->middleware('checkadmin');
+
+Route::get('/barang/view-barang', function(){
+    return view('barang.view');
+});
+
 Route::get('/barang/tambah-barang', [BarangController::class, 'add'])->middleware('checkadmin');
 Route::post('/barang/tambah-barang/store', [BarangController::class, 'create'])->middleware('checkadmin');
 Route::get('/barang/edit/{id_barang}', [BarangController::class, 'edit'])->middleware('checkadmin');
