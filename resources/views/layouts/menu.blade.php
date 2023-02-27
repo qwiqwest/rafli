@@ -96,8 +96,8 @@
                         <li>
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="fa fa-truck icon-wrap"></span> <span class="mini-click-non">Vendors</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Library" href="library-assets.html"><span class="mini-sub-pro">Semua Vendors</span></a></li>
-                                <li><a title="Add Library" href="add-library-assets.html"><span class="mini-sub-pro">Tambah Vendors</span></a></li>
+                                <li><a title="All Library" href="/vendors"><span class="mini-sub-pro">Semua Vendors</span></a></li>
+                                <li><a title="Add Library" href="/vendors/add"><span class="mini-sub-pro">Tambah Vendors</span></a></li>
                             </ul>
                         </li>
                         <li>

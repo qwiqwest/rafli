@@ -44,6 +44,14 @@ Route::get('/kasir/edit/{id}', [KasirController::class, 'edit'])->middleware('ch
 Route::get('/kasir/edit/{id}/store', [KasirController::class, 'update'])->middleware('checkadmin');
 Route::delete('/kasir/delete/{id}', [KasirController::class, 'delete'])->middleware('checkadmin');
 
+//barang
+Route::get('/vendors', [VendorsController::class, 'index'])->middleware('checkadmin');
+Route::get('/vendors/add', [VendorsController::class, 'add'])->middleware('checkadmin');
+Route::post('/vendors/add/store', [VendorsController::class, 'create'])->middleware('checkadmin');
+Route::get('/vendors/edit/{id}', [VendorsController::class, 'edit'])->middleware('checkadmin');
+Route::get('/vendors/edit/{id}/store', [VendorsController::class, 'update'])->middleware('checkadmin');
+Route::delete('/vendors/delete/{id}', [VendorsController::class, 'delete'])->middleware('checkadmin');
+
 //logout
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 
