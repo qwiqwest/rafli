@@ -39,9 +39,18 @@
                                                                 <div class="form-group">
                                                                     <input type="number" class="form-control" placeholder="Harga" id="harga" name="harga">
                                                                 </div>
-                                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                                <div class="form-group col-md-3">
+                                                                    <label for="lFullName">Vendor</label>
+                                                                    <select class="form-control" name="vendor_id" required>
+                                                                    <option value="">-- Pilih --</option>
+                                                                    @foreach ($vendors as $vendor)
+                                                                    <option value="{{ $vendor->id }}">{{ $vendor->name }}</option>
+                                                                    @endforeach
+                                                                    </select>
+                                                                </div>
                                                             </div>
                                                         </div>
+                                                        <button type="submit" class="btn btn-primary">Submit</button>
                                                     </div>
                                                 </div>
                                             </div>
