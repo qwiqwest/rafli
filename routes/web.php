@@ -6,7 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\KasirController;
 use App\Http\Controllers\VendorsController;
-use PhpParser\Node\Expr\FuncCall;
+use PhpParser\Node\Expr\FuncCall;   
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ Route::get('/', function(){
     return view('login.login');
 });
 Route::get('/admin', [Beranda::class,'admin'])->middleware('checkadmin');
-Route::get('/kasir', [Beranda::class,'kasir'])->middleware('checkkasir');
+Route::get('/cashier', [Beranda::class,'cashier'])->middleware('checkkasir');
 
 
 Route::post('/dasboard ', [LoginController::class,'login'])->name('dasboard');
@@ -47,16 +47,24 @@ Route::get('/kasir', [KasirController::class, 'index'])->middleware('checkadmin'
 Route::get('/kasir/add', [KasirController::class, 'add'])->middleware('checkadmin');
 Route::post('/kasir/add/store', [KasirController::class, 'create'])->middleware('checkadmin');
 Route::get('/kasir/edit/{id}', [KasirController::class, 'edit'])->middleware('checkadmin');
-Route::get('/kasir/edit/{id}/store', [KasirController::class, 'update'])->middleware('checkadmin');
+Route::put('/kasir/edit/{id}/store', [KasirController::class, 'update'])->middleware('checkadmin');
 Route::delete('/kasir/delete/{id}', [KasirController::class, 'delete'])->middleware('checkadmin');
 
-//barang
+//vendors
 Route::get('/vendors', [VendorsController::class, 'index'])->middleware('checkadmin');
 Route::get('/vendors/add', [VendorsController::class, 'add'])->middleware('checkadmin');
 Route::post('/vendors/add/store', [VendorsController::class, 'create'])->middleware('checkadmin');
 Route::get('/vendors/edit/{id}', [VendorsController::class, 'edit'])->middleware('checkadmin');
 Route::get('/vendors/edit/{id}/store', [VendorsController::class, 'update'])->middleware('checkadmin');
 Route::delete('/vendors/delete/{id}', [VendorsController::class, 'delete'])->middleware('checkadmin');
+
+//transaksi
+Route::get('/history-transaksi', function(){
+    return view('transaksi.history');
+});
+Route::get('/laporan-transaksi', function(){
+    return view('transaksi.laporan');
+});
 
 //logout
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');

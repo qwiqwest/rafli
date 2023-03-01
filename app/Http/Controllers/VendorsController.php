@@ -9,7 +9,7 @@ class VendorsController extends Controller
 {
     public function index()
     {
-        $vendors = Vendors::all()->where('role','=','vendors');
+        $vendors = Vendors::all();
 
         return view('vendors.vendors', compact(['vendors']));
     }   

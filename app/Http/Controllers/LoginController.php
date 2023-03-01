@@ -25,7 +25,7 @@ class LoginController extends Controller
                 if(Auth()->user()->role == 'admin') {
                     return redirect('admin');  
                 } else if (Auth()->user()->role == 'kasir') {
-                    return redirect('kasir');
+                    return redirect('cashier');
                 } else {
                     return redirect('/')->with('error','Input proper email or password.');
                 } 

@@ -101,17 +101,10 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="fa fa-inbox icon-wrap"></span> <span class="mini-click-non">Kategori</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Departments List" href="departments.html"><span class="mini-sub-pro">Semua Kategori</span></a></li>
-                                <li><a title="Add Departments" href="add-department.html"><span class="mini-sub-pro">Tambah Kategori</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="fa fa-credit-card icon-wrap"></span> <span class="mini-click-non">Transaksi</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Inbox" href="mailbox.html"><span class="mini-sub-pro">History Transaksi</span></a></li>
-                                <li><a title="View Mail" href="mailbox-view.html"><span class="mini-sub-pro">Laporan Transaksi</span></a></li>
+                                <li><a title="Inbox" href="/history-transaksi"><span class="mini-sub-pro">History Transaksi</span></a></li>
+                                <li><a title="View Mail" href="/laporan-transaksi"><span class="mini-sub-pro">Laporan Transaksi</span></a></li>
                             </ul>
                         </li>
                     </ul>

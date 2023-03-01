@@ -15,9 +15,12 @@ return new class extends Migration
     {
         Schema::create('transaksi', function (Blueprint $table) {
             $table->id('id_transaksi');
+            $table->integer('total_barang');
             $table->integer('total_harga');
+            $table->string('nama_barang');
             $table->enum('sistem_pembayaran',['Cash','Credit/Debit'])->default('Cash');
             $table->dateTime('waktu')->nullable(true);
+            $table->foreignId('nama_kasir')->references('id')->on('users')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
             $table->foreignId('created_by')->nullable(true)->references('id')->on('users')->onDelete('cascade');

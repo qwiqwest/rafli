@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Kasir;
+use App\Http\Controllers\Hash;
 
 class KasirController extends Controller
 {
@@ -44,7 +45,7 @@ class KasirController extends Controller
         $kasir->update($request->except(['_token']));
 
         session()->flash("success", "Data is updated");
-        return redirect('/barang')->with('success','Data berhasil ditambah');
+        return redirect('/kasir')->with('success','Data berhasil diedit');
     }
 
     //delete barang
@@ -55,11 +56,5 @@ class KasirController extends Controller
 
         session()->flash("success", "Data berhasil dihapus");
         return redirect('/kasir');
-    }
-
-    public function test()
-    {
-        $kasir = Kasir::all();
-        return view('welcome', compact(['kasir']));
     }
 }

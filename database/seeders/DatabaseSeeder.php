@@ -133,33 +133,14 @@ class DatabaseSeeder extends Seeder
         ]
     );
 
-    DB::table('member')->insert([[
-        'nama_member' => 'Harlan Maryam',
-        'email' => 'harmar@gmail.com',
-        'usia' => '37',
-        'jenis_kelamin' => 'L',
-        'alamat' => 'Komplek Jeruk Jl. Kejanjani 1 No.5',
-        'nomor_telepon' => '08916582612',
-        'barcode' => '321123123',
-        'level' => 'Gold',
-    ],
-    [
-        'nama_member' => 'Nafisa Afifah',
-        'email' => 'nafifa@gmail.com',
-        'usia' => '21',
-        'jenis_kelamin' => 'P',
-        'alamat' => 'Komplek Regency Queen Jl. Utama No.1',
-        'nomor_telepon' => '08976432101',
-        'barcode' => '321111111',
-        'level' => 'Platinum',
-    ],]
-    );
-
     DB::table('transaksi')->insert([
         'kasir_id' => '2',
         'total_harga' => '500000',
+        'total_barang' => '5',
+        'nama_barang' => 'mesin cukur',
         'sistem_pembayaran' => 'Credit/Debit',
         'waktu' => Carbon::now()->format('Y-m-d H:i:s'),
+        'nama_kasir' => '1',
     ],);
     
 }

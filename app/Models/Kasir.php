@@ -10,7 +10,7 @@ class Kasir extends Model
     use HasFactory;
 
     protected $table = 'users';
-    protected $fillable = ['id', 'username', 'name_lengkap', 'jk', 'alamat', 'nomor_telepon', 'email', 'password' ,'role'];
+    protected $fillable = ['username', 'name_lengkap', 'jk', 'alamat', 'nomor_telepon', 'email', 'password' ,'role'];
     protected $dates = [
         'created_at',
         'updated_at'

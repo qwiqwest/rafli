@@ -42,7 +42,9 @@
                                 <td>{{ $cashier->nomor_telepon }}</td>
                                 <td>{{ $cashier->email }}</td>
                                 <td>
-                                    <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <form action="/kasir/edit/{{ $cashier->id }}" method="GET">
+                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    </form>
                                     <form action="/kasir/delete/{{ $cashier->id }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
@@ -93,6 +95,8 @@
     })
  </script>
 @endif
+{{-- sweetalert end --}}
+
 @endsection
 @section('customscript')
  <!-- data table JS

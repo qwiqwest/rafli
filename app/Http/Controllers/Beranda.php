@@ -12,7 +12,7 @@ class Beranda extends Controller
     public function admin(){
         return view ('admin.admin');
     }
-    public function kasir(){
-        return view ('kasir.kasir');
+    public function cashier(){
+        return view ('cashier.cashier');
     }
 }

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nama_barang');
             $table->integer('stock');
             $table->integer('harga');
-            $table->integer('barcode');
+            $table->string('barcode');
             $table->foreignId('vendor_id')->nullable(true)->references('id')->on('vendors')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
