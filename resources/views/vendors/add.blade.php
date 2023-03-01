@@ -42,13 +42,14 @@
                                                             </div>
                                                         </div>
                                                         <button type="submit" class="btn btn-primary">Submit</button>
+                                                        <a href="/vendors" class="btn btn-danger">Cancel</a>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            <form method="post" action="/dashboard/users">
+                            <form method="post" action="/dashboard/users"></form>
                         </div>
                     </div>
                 </div>

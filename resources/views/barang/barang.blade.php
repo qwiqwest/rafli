@@ -75,7 +75,9 @@
                                                 <td>{{ $barang->barcode }}</td>
                                                 <td>{{ $barang->vendor_id }}</td>
                                                 <td>
-                                                    <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                                    <form action="/barang/edit/{{ $barang->id }}" method="GET">
+                                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                                    </form>
                                                     <form action="/barang/delete/{{ $barang->id }}" method="post" class="d-inline">
                                                         @method('delete')
                                                         @csrf

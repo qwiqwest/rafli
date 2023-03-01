@@ -15,7 +15,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="product-payment-inner-st">
                     <ul id="myTabedu1" class="tab-review-design">
-                        <li class="active"><a href="#reviews">Tambah Kasir</a></li>
+                        <li class="active"><a href="#reviews">Edit Kasir</a></li>
                     </ul>
                     <form method="post" action="/kasir/edit/{{ $kasir->id }}/store">
                     @csrf

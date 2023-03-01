@@ -40,7 +40,9 @@
                                 <td>{{ $vendor->email }}</td>
                                 <td>{{ $vendor->address }}</td>
                                 <td>
-                                    <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <form action="/vendors/edit/{{ $vendor->id }}" method="GET">
+                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    </form>
                                     <form action="/vendors/delete/{{ $vendor->id }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf

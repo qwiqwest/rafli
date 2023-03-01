@@ -38,8 +38,8 @@ Route::get('/barang/view-barang', function(){
 
 Route::get('/barang/tambah-barang', [BarangController::class, 'add'])->middleware('checkadmin');
 Route::post('/barang/tambah-barang/store', [BarangController::class, 'create'])->middleware('checkadmin');
-Route::get('/barang/edit/{id_barang}', [BarangController::class, 'edit'])->middleware('checkadmin');
-Route::get('/barang/edit/{id_barang}/store', [BarangController::class, 'update'])->middleware('checkadmin');
+Route::get('/barang/edit/{id}', [BarangController::class, 'edit'])->middleware('checkadmin');
+Route::put('/barang/edit/{id}/store', [BarangController::class, 'update'])->middleware('checkadmin');
 Route::delete('/barang/delete/{id}', [BarangController::class, 'delete'])->middleware('checkadmin');
 
 //barang
@@ -54,8 +54,8 @@ Route::delete('/kasir/delete/{id}', [KasirController::class, 'delete'])->middlew
 Route::get('/vendors', [VendorsController::class, 'index'])->middleware('checkadmin');
 Route::get('/vendors/add', [VendorsController::class, 'add'])->middleware('checkadmin');
 Route::post('/vendors/add/store', [VendorsController::class, 'create'])->middleware('checkadmin');
-Route::get('/vendors/edit/{id}', [VendorsController::class, 'edit'])->middleware('checkadmin');
-Route::get('/vendors/edit/{id}/store', [VendorsController::class, 'update'])->middleware('checkadmin');
+Route::get('/vendors/edit/{id_vendors}', [VendorsController::class, 'edit'])->middleware('checkadmin');
+Route::put('/vendors/edit/{id_vendors}/store', [VendorsController::class, 'update'])->middleware('checkadmin');
 Route::delete('/vendors/delete/{id}', [VendorsController::class, 'delete'])->middleware('checkadmin');
 
 //transaksi

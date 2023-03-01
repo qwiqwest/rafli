@@ -51,6 +51,7 @@
                                                             </div>
                                                         </div>
                                                         <button type="submit" class="btn btn-primary">Submit</button>
+                                                        <a href="/barang" class="btn btn-danger">Cancel</a>
                                                     </div>
                                                 </div>
                                             </div>

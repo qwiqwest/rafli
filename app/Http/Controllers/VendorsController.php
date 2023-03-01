@@ -44,7 +44,7 @@ class VendorsController extends Controller
         $vendors->update($request->except(['_token']));
 
         session()->flash("success", "Data is updated");
-        return redirect('/vendors')->with('success','Data berhasil ditambah');
+        return redirect('/vendors')->with('success','Data berhasil diedit');
     }
 
     //delete barang

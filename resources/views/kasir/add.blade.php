@@ -53,6 +53,7 @@
                                                                     <input type="text" class="form-control" placeholder="Password" id="password" name="password">   
                                                                 </div> 
                                                                 <button type="submit" class="btn btn-primary">Submit</button>
+                                                                <a href="/kasir" class="btn btn-danger">Cancel</a>
                                                             </div>
                                                         </div>
                                                     </div>

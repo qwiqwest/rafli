@@ -47,7 +47,7 @@ class BarangController extends Controller
         $data->update($request->except(['_token']));
 
         session()->flash("success", "Data is updated");
-        return redirect('/barang')->with('success','Data berhasil ditambah');
+        return redirect('/barang')->with('success','Data berhasil diedit');
     }
 
     //delete barang
