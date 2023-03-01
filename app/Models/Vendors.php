@@ -11,7 +11,7 @@ class Vendors extends Model
     use HasFactory;
 
     protected $table = 'vendors';
-    protected $fillable = ['id', 'name', 'phone', 'email', 'address'];
+    protected $fillable = ['id','name', 'phone', 'email', 'address'];
     protected $dates = [
         'created_at',
         'updated_at'
@@ -19,6 +19,6 @@ class Vendors extends Model
 
     public function barang()
     {
-        return $this->hasOne(Barang::class);
+        return $this->hasMany(Barang::class);
     }
 }

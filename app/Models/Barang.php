@@ -19,6 +19,6 @@ class Barang extends Model
 
     public function vendors()
     {
-        return $this->belongsTo(Vendors::class);
+        return $this->belongsTo(Vendors::class, 'id', 'name');
     }
 }

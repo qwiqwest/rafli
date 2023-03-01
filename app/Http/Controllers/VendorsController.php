@@ -56,10 +56,4 @@ class VendorsController extends Controller
         session()->flash("success", "Data berhasil dihapus");
         return redirect('/vendors');
     }
-
-    public function test()
-    {
-        $vendors = Vendors::all();
-        return view('welcome', compact(['vendors$vendors']));
-    }
 }
