@@ -17,8 +17,8 @@ class Barang extends Model
         'updated_at'
     ];
 
-    public function vendors()
+    public function vendor()
     {
-        return $this->belongsTo(Vendors::class, 'id', 'name');
+        return $this->belongsTo(Vendors::class);
     }
 }

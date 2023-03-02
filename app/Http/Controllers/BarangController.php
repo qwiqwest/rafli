@@ -5,14 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Barang;
 use App\Models\Vendors;
+use Illuminate\Support\Facades\DB;
 
 class BarangController extends Controller
 {
     public function index()
     {
-        $data = Barang::all();
+        $data = Barang::with('vendor')->get();
+        $vendors = Vendors::all();
 
-        return view('barang.barang', compact(['data']));
+        return view('barang.barang', compact(['data', 'vendors']));
     }   
 
     public function add()
@@ -58,11 +60,5 @@ class BarangController extends Controller
 
         session()->flash("success", "Data berhasil dihapus");
         return redirect('/barang');
-    }
-
-    public function test()
-    {
-        $data = Barang::all();
-        return view('welcome', compact(['data']));
     }
 }

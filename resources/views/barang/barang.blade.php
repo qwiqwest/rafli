@@ -73,7 +73,7 @@
                                                 <td>Rp.{{ $barang->harga }}</td>
                                                 <td>{{ $barang->stock }}</td>
                                                 <td>{{ $barang->barcode }}</td>
-                                                <td>{{ $barang->vendor_id }}</td>
+                                                <td>{{ $barang->vendor->name }}</td>
                                                 <td>
                                                     <form action="/barang/edit/{{ $barang->id }}" method="GET">
                                                         <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>

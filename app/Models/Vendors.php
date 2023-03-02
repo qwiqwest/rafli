@@ -21,4 +21,6 @@ class Vendors extends Model
     {
         return $this->hasMany(Barang::class);
     }
+
+    
 }
