@@ -61,4 +61,16 @@ class BarangController extends Controller
         session()->flash("success", "Data berhasil dihapus");
         return redirect('/barang');
     }
+
+    //barcode
+    public function barcode(Request $request){
+        $dataBarang = array();
+        
+        foreach ((array)$request->barcode as $barcode){
+            $barang = Barang::find($barcode);
+            $dataBarang[] = $barang;
+        }
+
+        return $dataBarang;
+    }
 }

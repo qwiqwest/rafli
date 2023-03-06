@@ -37,6 +37,7 @@ Route::get('/barang/view-barang', function(){
 });
 
 Route::get('/barang/tambah-barang', [BarangController::class, 'add'])->middleware('checkadmin');
+Route::get('/barang/cetak-barcode', [BarangController::class, 'barcode'])->middleware('checkadmin');
 Route::post('/barang/tambah-barang/store', [BarangController::class, 'create'])->middleware('checkadmin');
 Route::get('/barang/edit/{id}', [BarangController::class, 'edit'])->middleware('checkadmin');
 Route::put('/barang/edit/{id}/store', [BarangController::class, 'update'])->middleware('checkadmin');

@@ -40,15 +40,20 @@
                         <div class="sparkline13-list">
                             <div class="sparkline13-hd">
                                 <div class="main-sparkline13-hd">
-                                    <h1>Projects <span class="table-project-n">Data</span> Table</h1>
+                                    <h1>Halaman <span class="table-project-n">Semua</span> Barang</h1>
                                 </div>
                             </div>
                             <div class="sparkline13-graph">
                                 <div class="datatable-dashv1-list custom-datatable-overright">
-                                <div class="add-product">
-                                    <a href="/barang/tambah-barang">Add Barang</a>
-                                </div>
-                                    <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                    <div class="d-flex">
+                                        <div class="add-product">
+                                            <a href="/barang/tambah-barang">Add Barang</a>
+                                        </div>
+                                        <div class="cetak-barcode">
+                                            <a href="/barang/cetak-barcode">Cetak Barcode</a>
+                                        </div>
+                                    </div>
+                                <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
                                         data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                         <thead>
                                             <tr>
@@ -72,7 +77,9 @@
                                                 <td>Tersedia</td>
                                                 <td>Rp.{{ $barang->harga }}</td>
                                                 <td>{{ $barang->stock }}</td>
-                                                <td>{{ $barang->barcode }}</td>
+                                                <td>{!! DNS1D::getBarcodeHTML("$barang->barcode", 'PHARMA') !!}
+                                                 P - {{ $barang->barcode }}
+                                                 </td>
                                                 <td>{{ $barang->vendor->name }}</td>
                                                 <td>
                                                     <form action="/barang/edit/{{ $barang->id }}" method="GET">
