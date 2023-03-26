@@ -1,5 +1,5 @@
 https://github.com/puikinsh/kiaalap
-
+https://github.com/angkosal/laravel-pos.git
 
 @foreach ($data as $barang)
                             <div class="student-dtl">
