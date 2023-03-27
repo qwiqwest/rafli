@@ -153,7 +153,7 @@
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
 															<img src="img/product/pro4.jpg" alt="" />
-															<span class="admin-name">Prof.Anderson</span>
+															<span class="admin-name">Admin</span>
 															<i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
 														</a>
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
@@ -322,9 +322,6 @@
         <!-- main JS
             ============================================ -->
         <script src="{{ asset('assets/js/main.js')}}"></script>
-        <!-- tawk chat JS
-            ============================================ -->
-        <script src="{{ asset('assets/js/tawk-chat.js')}}"></script>
         @yield('customscript')
 </body>
 
