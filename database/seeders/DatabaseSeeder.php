@@ -31,12 +31,32 @@ class DatabaseSeeder extends Seeder
             'role' => 'admin'
         ],
         [
-            'username' => 'Kasir',
-            'name_lengkap' => 'KasirAdaAja',
+            'username' => 'Kasir1',
+            'name_lengkap' => 'Kendrick Marshall',
             'jk' => 'L',
-            'alamat' => 'simlim no 1',
-            'nomor_telepon' => '0812345678',
-            'email' => 'kasir@gmail.com',
+            'alamat' => 'Gg. Kota Selatan No.51 RT.05 RW.01',
+            'nomor_telepon' => '081234567841',
+            'email' => 'kasir1@gmail.com',
+            'password' => Hash::make('kasir'),
+            'role' => 'kasir'
+        ],
+        [
+            'username' => 'Kasir2',
+            'name_lengkap' => 'Amaria Putri',
+            'jk' => 'P',
+            'alamat' => 'Jl. Kuta No.6',
+            'nomor_telepon' => '088165471631',
+            'email' => 'kasir2@gmail.com',
+            'password' => Hash::make('kasir'),
+            'role' => 'kasir'
+        ],
+        [
+            'username' => 'Kasir3',
+            'name_lengkap' => 'Dita Balkis',
+            'jk' => 'P',
+            'alamat' => 'Jl. Gunung Kidul No.221',
+            'nomor_telepon' => '080178416121',
+            'email' => 'kasir3@gmail.com',
             'password' => Hash::make('kasir'),
             'role' => 'kasir'
         ],
@@ -46,33 +66,46 @@ class DatabaseSeeder extends Seeder
             User::create($value);
         }
         
-        DB::table('vendors')->insert([
+        DB::table('vendors')->insert([[
             'name' => 'Soft Barber',
             'phone' => '083712710141',
             'email' => 'softbarber@gmail.com',
             'address' => 'Jl. Maruani No.8',
-        ],);
+        ],
+        [
+            'name' => "Mick's Style",
+            'phone' => '088175641028',
+            'email' => 'mickschu@gmail.com',
+            'address' => 'Komplek Anggrek No.32',
+        ],
+        [
+            'name' => 'Hairstyle Machine',
+            'phone' => '080184712131',
+            'email' => 'machinehairstyle@gmail.com',
+            'address' => 'Jl. Kota Besar No.21B',
+        ]
+        ]);
         
         DB::table('barang')->insert([[
             'nama_barang' => 'Kursi Barber',
             'stock' => '5',
             'harga' => '4000000',
             'barcode' => '321123123',
-            'vendor_id' => '1',
+            'vendor_id' => '2',
         ],
         [
             'nama_barang' => 'Gunting Rambut',
             'stock' => '23',
             'harga' => '12000',
             'barcode' => '321123124',
-            'vendor_id' => '1',
+            'vendor_id' => '3',
         ],
         [
             'nama_barang' => 'Pisau Cukur',
             'stock' => '16',
             'harga' => '30000',
             'barcode' => '321123125',
-            'vendor_id' => '1',
+            'vendor_id' => '3',
         ],
         [
             'nama_barang' => 'Handuk',
@@ -86,7 +119,7 @@ class DatabaseSeeder extends Seeder
             'stock' => '12',
             'harga' => '1250000',
             'barcode' => '321123127',
-            'vendor_id' => '1',
+            'vendor_id' => '3',
         ],
         [
             'nama_barang' => 'Botol Semprot',
@@ -121,7 +154,7 @@ class DatabaseSeeder extends Seeder
             'stock' => '18',
             'harga' => '800000',
             'barcode' => '321123132',
-            'vendor_id' => '1',
+            'vendor_id' => '2',
         ],
         [
             'nama_barang' => 'Sisir',
