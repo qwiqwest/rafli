@@ -11,4 +11,9 @@ class Cashier extends Controller
         $data = Barang::all();
         return view('cashier.transaksi',compact(['data']));
     }
+
+    public function history(){
+        return view('cashier.history-transaksi');
+    }
+
 }
