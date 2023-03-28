@@ -31,7 +31,7 @@
                                             <select name="id[]" id="id" class="form-control id">
                                                 <option value="">Pilih Barang</option>
                                                     @foreach ($data as $barang)
-                                                        <option data-price="{{ $barang->harga }}" 
+                                                        <option data-price="{{ $barang->harga }}" data-barcode="{{ $barang->barcode }}"
                                                             value="{{ $barang->id }}">
                                                             {{ $barang->nama_barang }}
                                                     @endforeach
@@ -54,7 +54,6 @@
                                             class="form-control total_amount">
                                         </td>
                                         <td><a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i></a></td>
-
                                     </tr>
                                 </tbody>
                             </table>
@@ -118,7 +117,9 @@
     $('.addMoreProduct').delegate('.id', 'change', function(){
         var tr = $(this).parent().parent();
         var harga = tr.find('.id option:selected').attr('data-price');
+        var barcode = tr.find('.id option:selected').attr('data-barcode');
         tr.find('.harga').val(harga);
+        tr.find('.barcode').val(barcode);
         var qty = tr.find('.qty').val() - 0;
         var barcode = tr.find('.barcode').val() - 0;
         var harga = tr.find('.harga').val() - 0;

@@ -124,7 +124,7 @@ class DatabaseSeeder extends Seeder
             'vendor_id' => '1',
         ],
         [
-            'nama_barang' => 'Sisr',
+            'nama_barang' => 'Sisir',
             'stock' => '50',
             'harga' => '12000',
             'barcode' => '321123133',
