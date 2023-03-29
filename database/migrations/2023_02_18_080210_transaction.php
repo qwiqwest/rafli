@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('total_barang');
             $table->integer('total_harga');
             $table->string('nama_barang');
-            $table->enum('sistem_pembayaran',['Cash','Credit/Debit'])->default('Cash');
+            $table->enum('sistem_pembayaran',['Cash','Credit','Debit'])->default('Cash');
             $table->dateTime('waktu')->nullable(true);
             $table->foreignId('nama_kasir')->references('id')->on('users')->onDelete('cascade');
             $table->rememberToken();

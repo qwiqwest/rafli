@@ -171,7 +171,7 @@ class DatabaseSeeder extends Seeder
         'total_harga' => '500000',
         'total_barang' => '5',
         'nama_barang' => 'mesin cukur',
-        'sistem_pembayaran' => 'Credit/Debit',
+        'sistem_pembayaran' => 'Cash',
         'waktu' => Carbon::now()->format('Y-m-d H:i:s'),
         'nama_kasir' => '1',
     ],);

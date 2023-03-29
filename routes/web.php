@@ -79,14 +79,13 @@ Route::get('/laporan-transaksi', function(){
 });
 //transaksi(Kasir)
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //{{ cashier }}
 Route::get('/transaksi', [Cashier::class, 'transaksi'])->middleware('checkkasir');
+Route::get('/transaksi/store', [Cashier::class, 'store'])->middleware('checkkasir');
 Route::get('/transaksi/history', [Cashier::class, 'history'])->middleware('checkkasir');

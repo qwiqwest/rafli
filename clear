@@ -1,0 +1,51 @@
+[1mdiff --git a/resources/views/cashier/transaksi.blade.php b/resources/views/cashier/transaksi.blade.php[m
+[1mindex 75b77c0..cea3498 100644[m
+[1m--- a/resources/views/cashier/transaksi.blade.php[m
+[1m+++ b/resources/views/cashier/transaksi.blade.php[m
+[36m@@ -5,7 +5,7 @@[m
+     <div class="contiainer-fluid">[m
+         <div class="col-lg-12">[m
+             <div class="row">[m
+[31m-                <div class="col-md-9">[m
+[32m+[m[32m                <div class="col-md-8">[m
+                     <div class="card">[m
+                         <div class="card-header">[m
+                             <h4 style="float: left">Transaksi</h4>[m
+[36m@@ -66,7 +66,36 @@[m [mclass="form-control total_amount">[m
+                                     <h4>Total <b class="total"> 0.00 </b></h4>[m
+                                 </div>[m
+                                 <div class="card-body">[m
+[31m-                                    ..............[m
+[32m+[m[32m                                    <div class="panel">[m
+[32m+[m[32m                                        <div class="row">[m
+[32m+[m[32m                                            <table class="table table-striped">[m
+[32m+[m[32m                                                <tr>[m
+[32m+[m[32m                                                    <td>[m
+[32m+[m[32m                                                        <label for="">Customer Name</label>[m
+[32m+[m[32m                                                            <div class="col-md-6">[m
+[32m+[m[32m                                                        <input type="text" name="customer_name" id="" class="form-control">[m
+[32m+[m[32m                                                    </td>[m
+[32m+[m[32m                                                    <td>[m
+[32m+[m[32m                                                        <label for="">Customer Phone</label>[m
+[32m+[m[32m                                                            <div class="col-md-6">[m
+[32m+[m[32m                                                        <input type="number" name="customer_phone" id="" class="form-control">[m
+[32m+[m[32m                                                    </td>[m
+[32m+[m[32m                                                </tr>[m
+[32m+[m[32m                                            </table>[m
+[32m+[m[32m                                            <!-- <div class="form-group">[m
+[32m+[m[32m                                                <label for="">Customer Name</label>[m
+[32m+[m[32m                                                <div class="col-md-6">[m
+[32m+[m[32m                                                <input type="text" name="customer_name" id="" class="form-control">[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                            <div class="form-group">[m
+[32m+[m[32m                                                <label for="">Customer Phone</label>[m
+[32m+[m[32m                                                <div class="col-md-6">[m
+[32m+[m[32m                                                <input type="number" name="customer_phone" id="" class="form-control">[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                            </div> -->[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+                                 </div>[m
+                             </div>[m
+                         </div>[m
