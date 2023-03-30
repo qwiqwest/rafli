@@ -43,7 +43,7 @@
                                         </td>
                                         <td>
                                             <input type="number" name="qty[]" id="qty" 
-                                            class="form-control qty">
+                                            class="form-control qty" value="> 0">
                                         </td>
                                         <td>
                                             <input type="number" name="barcode[]" id="barcode" 
@@ -190,9 +190,6 @@
 @section('customscript')
 
 <script>
-    // $(document).ready(function(){
-    //     alert(1);
-    // })
 
     //add more product
     $('.add_more').on('click', function(){
@@ -256,5 +253,7 @@
         var tot = paid_amount - total;
         $('#balance').val(tot).toFixed(2);
     })
+
+    $('.qty').delegated('.qty')
 </script>
 @endsection

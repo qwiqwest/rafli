@@ -75,7 +75,7 @@
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $barang->nama_barang }}</td>
                                                 <td>Tersedia</td>
-                                                <td>Rp.{{ $barang->harga }}</td>
+                                                <td>Rp. {{ number_format($barang->harga, 2) }}</td>
                                                 <td>{{ $barang->stock }}</td>
                                                 <td>{!! DNS1D::getBarcodeHTML("$barang->barcode", 'PHARMA') !!}
                                                  P - {{ $barang->barcode }}
