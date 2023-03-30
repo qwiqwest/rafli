@@ -43,7 +43,7 @@
                                         </td>
                                         <td>
                                             <input type="number" name="qty[]" id="qty" 
-                                            class="form-control qty" value="> 0">
+                                            class="form-control qty" min="0">
                                         </td>
                                         <td>
                                             <input type="number" name="barcode[]" id="barcode" 
@@ -66,6 +66,17 @@
                                     <h4>Total <b class="total"> 0.00 </b></h4>
                                 </div>
                                 <div class="card-body">
+                                    <div class="btn-group">
+                                        <button type="button" 
+                                        onclick="PrintReceiptContent('print')" 
+                                        class="btn-btn-dark"><i class="fa fa-print">Print</i></button>
+                                        <button type="button" 
+                                        onclick="PrintReceiptContent('print')" 
+                                        class="btn-btn-dark"><i class="fa fa-history">History</i></button>
+                                        <button type="button" 
+                                        onclick="PrintReceiptContent('print')" 
+                                        class="btn-btn-dark"><i class="fa fa-send">Report</i></button>
+                                    </div>
                                     <div class="panel">
                                         <div class="row">
                                             <table class="table table-striped">
@@ -124,6 +135,12 @@
                         </div>
                         </div>
                         </div>
+
+    <div class="modal">
+        <div id="print">
+            @include('cashier.receipt')
+        </div>
+    </div>
 
 
 <style>
@@ -254,6 +271,22 @@
         $('#balance').val(tot).toFixed(2);
     })
 
-    $('.qty').delegated('.qty')
+    //print section
+    function PrintReceiptContent(el){
+        var data = '<input type="button" id="printPageButton class="printPageButton" style="display: block; width:100%; border: none; background-color: #008B8B; color: #fff; padding: 14px 28px; font-size: 16px; cursor:pointer; text-align: center" value="Print Receipt" onClick="window.print()">';
+
+            data += document.getElementById(el).innerHTML;
+            myReceipt = window.open("","myWin","left=150, top=130, width=400, height=400");
+                myReceipt.screnX = 0;
+                myReceipt.screnY = 0;
+                myReceipt.document.write(data);
+                myReceipt.document.title = "Print Receipt";
+            myReceipt.focus();
+            setTimeout(() => {
+                myReceipt.close();  
+            }, 8000 
+            );
+
+    }
 </script>
 @endsection

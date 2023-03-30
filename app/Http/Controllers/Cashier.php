@@ -14,7 +14,10 @@ class Cashier extends Controller
     public function transaksi(){
         $data = Barang::all();
         $orders = Order::all();
-        return view('cashier.transaksi',compact(['data', 'orders']));
+        // Last order details
+        $lastID = Order_Detail::max('order_id');
+        $order_receipt = Order_Detail::where('order_id', $lastID)->get();
+        return view('cashier.transaksi',compact(['data', 'orders', 'order_receipt']));
     }
 
     public function history(){
