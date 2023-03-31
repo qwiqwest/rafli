@@ -34,12 +34,12 @@
                 <td class="Rate"><h2>Sub Total</h2></td>
             </tr>
 
-            @foreach($order_receipt as $receipt)
+            @foreach ($order_receipt as $receipt)
             <tr class="service">
-                <td class="tableitem"><p class="itemtext"> {{ $receipt->barang->nama_barang}}</p></td>
-                <td class="tableitem"><p class="itemtext"> {{ $receipt->barang->stock}}</p></td>
-                <td class="tableitem"><p class="itemtext"> {{ $receipt->barang->harga}}</p></td>
-                <td class="tableitem"><p class="itemtext"> {{ $receipt->barang->total}}</p></td>
+                <td class="tableitem"><p class="itemtext"> {{ $receipt->nama_barang }}</p></td>
+                <td class="tableitem"><p class="itemtext"> {{ $receipt->stock }}</p></td>
+                <td class="tableitem"><p class="itemtext"> {{ $receipt->barcode }}</p></td>
+                <td class="tableitem"><p class="itemtext"> {{ $receipt->harga }}</p></td>
             </tr>
             @endforeach
 

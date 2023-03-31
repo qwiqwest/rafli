@@ -63,6 +63,7 @@
         <!-- modernizr JS
             ============================================ -->
         <script src="{{ asset('assets/js/vendor/modernizr-2.8.3.min.js')}}"></script>    
+        @livewireStyles
 </head>
 
 <body>
@@ -278,6 +279,7 @@
             ============================================ -->
         <script src="{{ asset('assets/js/main.js')}}"></script>
         @yield('customscript')
+        @livewireScripts
 </body>
 
 </html>

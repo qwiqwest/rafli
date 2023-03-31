@@ -176,5 +176,10 @@ class DatabaseSeeder extends Seeder
         'nama_kasir' => '1',
     ],);
     
+    DB::table('orders')->insert([
+        'name' => 'first',
+        'address' => 'gg.tegallega',
+    ],);
+    
 }
 }

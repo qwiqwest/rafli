@@ -5,18 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Models\Barang;
 use App\Models\Transaction;
-use App\Models\Order_Detail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class Cashier extends Controller
 {
+    use HasFactory;
+
     public function transaksi(){
         $data = Barang::all();
         $orders = Order::all();
         // Last order details
-        $lastID = Order_Detail::max('order_id');
-        $order_receipt = Order_Detail::where('order_id', $lastID)->get();
+        $lastID = Transaction::min('id');
+        $order_receipt = Transaction::where('id', $lastID)->get();
         return view('cashier.transaksi',compact(['data', 'orders', 'order_receipt']));
     }
 
@@ -35,14 +37,14 @@ class Cashier extends Controller
 
             for($product_id = 0; $product_id < count($request->product_id); $product_id++){
 
-                $order_details = new Order_Detail;
-                $order_details->order_id = $order_id;
-                $order_details->product_id = $request->product_id[$product_id];
-                $order_details->unitprice = $request->unitprice[$product_id];
-                $order_details->quantity = $request->quantity[$product_id];
-                $order_details->discount = $request->discount[$product_id];
-                $order_details->amount = $request->amount[$product_id];
-                $order_details->save();
+                $transaksi = new Transaction();
+                $transaksi->order_id = $order_id;
+                $transaksi->product_id = $request->product_id[$product_id];
+                $transaksi->unitprice = $request->unitprice[$product_id];
+                $transaksi->quantity = $request->quantity[$product_id];
+                $transaksi->discount = $request->discount[$product_id];
+                $transaksi->amount = $request->amount[$product_id];
+                $transaksi->save();
             }
             
             $transaction = new Transaction();
@@ -55,15 +57,10 @@ class Cashier extends Controller
             $transaction->save();
             
             $data = Barang::all();
-            $order_details = Order_Detail::where('order_id', $order_id)->get();
+            $transaksi = Transaction::where('id_transaksi', $order_id)->get();
             $orderedby = Order::where('id', $order_id)->get();
 
-            return view('cashier.transaksi',
-            [
-                'barang' => $data,
-                'order_details' => $order_details,
-                'customer_orders' => $orderedby
-            ]);
+            return view('cashier.transaksi',compact(['data', 'transaksi', 'customer_orders']));
         });
         return "Barang gagal dimasukkan! periksa inputnya!!!";
     }

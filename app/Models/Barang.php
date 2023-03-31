@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\Cart;
 use App\Models\Vendors;
-use App\Models\Order_Detail;
+use App\Models\Transaction;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -23,9 +24,14 @@ class Barang extends Model
         return $this->belongsTo(Vendors::class);
     }
 
-    public function orderDetail()
+    public function transaction()
     {
-        return $this->hasMany(Order_Detail::class);
+        return $this->hasMany(Transaction::class);
+    }
+
+    public function cart()
+    {
+        return $this->hasMany(Cart::class);
     }
 
 }

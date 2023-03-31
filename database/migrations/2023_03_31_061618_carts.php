@@ -13,14 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('order_details', function (Blueprint $table){
+        Schema::create('carts', function(Blueprint $table){
             $table->id();
-            $table->integer('order_id');
-            $table->integer('product_id');
-            $table->integer('qty');
-            $table->integer('unitprice');
-            $table->integer('amount');
+            $table->integer('product_qty')->default(1);
+            $table->integer('product_price')->default(1);
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
+        });
+
+        Schema::table('carts', function (Blueprint $table){
+            $table->foreignId('product_id')->references('id')->on('barang')->onDelete('cascade');
         });
     }
 
