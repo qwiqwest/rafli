@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KasirController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\VendorsController;
 use App\Http\Livewire\Product;
 use App\Http\Livewire\Cart;
@@ -71,15 +72,10 @@ Route::get('/logout', [LoginController::class,'logout'])->name('logout');
 
 //{{ cashier }}
 //transaksi
-Route::get('/history-transaksi', function(){
-    return view('transaksi.history');
-});
-Route::get('/laporan-transaksi', function(){
-    return view('transaksi.laporan');
-});
-//transaksi(Kasir)
-
-
+Route::get('/laporan-transaksi', [LaporanController::class, 'laporan'])->middleware('checkadmin');
+Route::delete('/laporan-transaksi/delete/{id}', [LaporanController::class, 'delete'])->middleware('checkadmin');
+    
+    
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 

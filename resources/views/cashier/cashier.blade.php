@@ -84,7 +84,6 @@
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="fa fa-users icon-wrap"></span> <span class="mini-click-non">Transaksi</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
                                 <li><a title="All Courses" href="{{ URL('/transaksi') }}"><span class="mini-sub-pro">Transaksi</span></a></li>
-                                <li><a title="Add Courses" href="{{ URL('/transaksi/history') }}"><span class="mini-sub-pro">History Transaksi</span></a></li>
                             </ul>
                         </li>
                     </ul>
@@ -169,8 +168,6 @@
                                         <li><a data-toggle="collapse" data-target="#democrou" href="/transaksi">Transaksi <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul id="democrou" class="collapse dropdown-header-top">
                                                 <li><a href="/transaksi">Transaksi</a>
-                                                </li>
-                                                <li><a href="/transaksi/history">History Transaksi</a>
                                                 </li>
                                             </ul>
                                         </li>

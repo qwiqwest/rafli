@@ -103,7 +103,7 @@
                         <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="fa fa-credit-card icon-wrap"></span> <span class="mini-click-non">Transaksi</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Inbox" href="/history-transaksi"><span class="mini-sub-pro">History Transaksi</span></a></li>
+                                <!-- <li><a title="Inbox" href="/history-transaksi"><span class="mini-sub-pro">History Transaksi</span></a></li> -->
                                 <li><a title="View Mail" href="/laporan-transaksi"><span class="mini-sub-pro">Laporan Transaksi</span></a></li>
                             </ul>
                         </li>
@@ -157,14 +157,6 @@
 															<i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
 														</a>
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                        <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
-                                                        </li>
-                                                        <li><a href="#"><span class="edu-icon edu-user-rounded author-log-ic"></span>My Profile</a>
-                                                        </li>
-                                                        <li><a href="#"><span class="edu-icon edu-money author-log-ic"></span>User Billing</a>
-                                                        </li>
-                                                        <li><a href="#"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
-                                                        </li>
                                                         <li><a href="/logout"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
                                                         </li>
                                                     </ul>
@@ -212,8 +204,8 @@
                                         </li>
                                         <li><a data-toggle="collapse" data-target="#democrou" href="/kasir">Transaksi <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul id="democrou" class="collapse dropdown-header-top">
-                                                <li><a href="/history-transaksi">Histori Transaksi</a>
-                                                </li>
+                                                <!-- <li><a href="/history-transaksi">Histori Transaksi</a> -->
+                                                <!-- </li> -->
                                                 <li><a href="/laporan-transaksi">Laporan Kasir</a>
                                                 </li>
                                             </ul>
